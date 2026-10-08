@@ -1,0 +1,4 @@
+interface:
+  display_name: "Talep analizi"
+  short_description: "Notlardan çelişki, açık nokta ve soru çıkarır"
+  default_prompt: "docs/notlar altındaki dosyalar için talep analizi yap"

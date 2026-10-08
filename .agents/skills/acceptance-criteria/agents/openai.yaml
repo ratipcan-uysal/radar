@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kabul kriterleri"
+  short_description: "Kararlardan ölçülebilir kriter ve eksik karar listesi"
+  default_prompt: "docs/kararlar.md'ye göre kabul kriterlerini yaz"

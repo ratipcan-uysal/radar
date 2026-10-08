@@ -1,0 +1,4 @@
+interface:
+  display_name: "Geri bildirim kümeleme"
+  short_description: "Tema sözlüğü önerir, betikle ölçer"
+  default_prompt: "data/ornek-geri-bildirim.csv için tema sözlüğü öner ve ölç"

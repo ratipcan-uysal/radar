@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sürüm notu"
+  short_description: "Git geçmişinden kullanıcı dilinde sürüm notu"
+  default_prompt: "Son tag'den bu yana sürüm notu yaz"
+policy:
+  allow_implicit_invocation: false

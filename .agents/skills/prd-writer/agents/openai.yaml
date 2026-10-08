@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD yazımı"
+  short_description: "Kaynaklı, uydurmasız PRD; eleştiriye cevap tablosu"
+  default_prompt: "Kararlara ve kriterlere göre PRD'yi güncelle"
