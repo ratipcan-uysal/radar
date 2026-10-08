@@ -3,3 +3,10 @@ model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
+
+# Radar'ın kendi MCP sunucusu (araclar/mcp/radar-mcp.mjs)
+[mcp_servers.radar]
+command = "node"
+args = ["araclar/mcp/radar-mcp.mjs"]
+# İki araç da yalnız okur: onaysız çalışabilir
+default_tools_approval_mode = "approve"

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "radar": {
+      "command": "node",
+      "args": ["araclar/mcp/radar-mcp.mjs"]
+    }
+  }
+}
