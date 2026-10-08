@@ -1,0 +1,1 @@
+release-manager ajanını kullan. Radar'ın ilk sürümünü hazırla: daha önce sürüm tag'i yok (v ile başlayan); adim-01-notlar'dan HEAD'e kadar olan değişikliklerden kullanıcıya dönük sürüm notu yaz, CHANGELOG.md oluştur. Sürüm numarası öner ve gerekçesini yaz. Kontrol listesini doldur. Tag, push ve yayın komutlarını çalıştırma; yalnız listele.
