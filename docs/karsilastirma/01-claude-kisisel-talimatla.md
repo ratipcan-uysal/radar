@@ -1,69 +1,61 @@
-# Radar: geliştirme öncesi netleşmesi gerekenler
+Notları okudum. CSV'nin ilk 30 satırına baktım; ek olarak bütün dosyada telefon numarası ve İngilizce metin aradım. Bu taramadan gelen maddeleri "30. satır sonrası" diye ayrıca işaretledim.
 
-Kaynak kısaltmaları: **TN** = `docs/notlar/toplanti-notu.md` (3 Ekim), **SD** = `docs/notlar/slack-dokumu.md` (4-6 Ekim), **CSV** = `data/ornek-geri-bildirim.csv`.
+# Radar: geliştirme öncesi netleşmesi gerekenler
 
 ## 1. Çelişkiler
 
 | # | Çelişki | Kaynak |
 |---|---|---|
-| 1.1 | **Kanal ağırlığı.** Selin mağaza yorumları daha ağır sayılsın diyor ("herkes görüyor, puanı düşürüyor"). Ece tüm kanalların eşit sayılmasını istiyor ("yoksa sonucu biz yönlendirmiş oluruz"). | TN, Selin ve Ece |
-| 1.2 | **En büyük sorun hangisi?** Selin'e göre iptal ücreti, Mert'e göre bildirim gecikmesi. CSV'nin ilk 30 satırındaki kendi sayımım ikisini de doğruluyor ama farklı kanallarda: iptal ücreti 12 kayıt (5'i destek), bildirim gecikmesi 8 kayıt (7'si mağaza). Hangisinin üstte çıkacağını 1.1'deki ağırlık kararı belirliyor. | TN, Selin ve Mert; CSV satır 1-30 |
-| 1.3 | **Doğru sonuç önceden belirlenmiş.** Selin "iptal ücreti en üstte çıkmazsa araç yanlış çalışıyor" diyor. Ece ise sonucun yönlendirilmemesini istiyor. Aracın neye göre "doğru" sayılacağı konusunda anlaşma yok. | SD, Selin; TN, Ece |
-| 1.4 | **Hacim tutmuyor.** Selin'e göre bir günde 14 iptal ücreti şikâyeti gelmiş. Örnek dosyada ise 6 haftada toplam 150 satır var, yani günde yaklaşık 3,5 kayıt. Örnek dosya gerçek hacmi temsil etmiyor olabilir; bu bir varsayım. | SD, Selin ve Ece |
-| 1.5 | **Kişisel veri.** Mert CSV'de ad ve telefon sütunu olduğunu söylüyor. Ece örnekte bu sütunları silmiş ama metinlerde telefon geçtiğini belirtiyor. Gerçek dosyanın hangi sütunlarla geleceği belli değil. | TN, Mert; SD, Ece |
-| 1.6 | **Alıntı ile kişisel veri çakışıyor.** Deniz raporda "iki üç gerçek alıntı" istiyor ve rapor yönetime, Confluence'a gidecek. Telefon numarası geçen metinler alıntı olarak seçilirse kişisel veri rapora girer. | TN, Deniz ve Mert; SD, Ece |
-| 1.7 | **Sütun listesi.** Ece beş sütun saydı: tarih, kanal, metin, puan, segment. CSV'de bir de `id` var. Gerçek dosyada id'nin her zaman olup olmayacağı bilinmiyor. | TN, Ece; CSV başlık satırı |
+| 1.1 | **Kanal ağırlığı.** Selin mağaza yorumlarının daha ağır sayılmasını istiyor ("herkes görüyor, puanı düşürüyor"). Ece bütün kanalların eşit sayılmasını istiyor ("yoksa sonucu biz yönlendirmiş oluruz"). Toplantıda karara bağlanmadı. | toplanti-notu.md, Selin / Ece |
+| 1.2 | **En büyük şikâyet hangisi?** Selin'e göre iptal ücreti, Mert'e göre bildirim gecikmesi. İkisi farklı kanallara bakıyor: Selin destek kayıtlarına, Mert mağaza yorumlarına. İlk 30 satırı elle saydığımda (*varsayım: benim sınıflandırmam*) iptal ücretiyle ilgili 5 kayıt var (GB-0005, 0007, 0013, 0021, 0030). Bunların 3'ü destekten, 2'si mağazadan geliyor. Bildirim gecikmesiyle ilgili de 5 kayıt var (GB-0003, 0006, 0009, 0020, 0024). Bunların 3'ü mağazadan, 2'si anketten geliyor. Hangisinin üstte çıkacağını 1.1'deki ağırlık kararı belirliyor. | toplanti-notu.md, Selin / Mert; CSV ilk 30 satır |
+| 1.3 | **Beklenen sonuç önceden konmuş.** Selin "iptal ücreti en üstte çıkmazsa araç yanlış çalışıyor" diyor. Ece ise sonucun yönlendirilmemesini istiyor. Aracın doğru çalıştığına neye bakılarak karar verileceği iki kişide farklı. | slack-dokumu.md, Selin; toplanti-notu.md, Ece |
+| 1.4 | **Puan ölçeği.** Deniz kaynağı "NPS anketi" olarak anıyor. NPS normalde 0-10 ölçeğinde. CSV'de `anket` kanalının puanları ilk 30 satırda yalnız 1-5 arası. Dönüştürme yapılıp yapılmadığı yazmıyor. *Varsayım: ölçek dönüştürülmüş olabilir.* | toplanti-notu.md, Deniz; CSV |
+| 1.5 | **Mağaza ayrımı kayboluyor.** Deniz "App Store ve Google Play" diye iki ayrı kaynak sayıyor. CSV'de ise tek bir `magaza` değeri var. Mert gecikmenin Android 14 ve 5.2 sürümünde başladığını düşünüyor ve platform sütunu soruyor. Ece platform sütunu olmadığını söylüyor. | toplanti-notu.md, Deniz; slack-dokumu.md, Mert / Ece |
+| 1.6 | **Veri sıklığı ve dönem.** Ece önce "her hafta pazartesi" diyor, aynı toplantıda "günlük de gelebilir" diyor. Deniz aracı "her çeyrek başında" kullanmayı düşünüyor. Örnek dosya ise "son 6 hafta" kapsıyor. | toplanti-notu.md, Ece / Deniz; slack-dokumu.md, Ece |
+| 1.7 | **Hacim tutmuyor.** Selin bir günde 14 iptal ücreti şikâyeti geldiğini söylüyor. Örnek dosyada 6 haftaya ait toplam 150 satır var. Dosya tüm kayıtları mı içeriyor, örneklem mi, belli değil. *Varsayım: örneklem.* | slack-dokumu.md, Selin / Ece |
+| 1.8 | **Kişisel veri silinmiş görünüyor ama silinmemiş.** Mert'e göre destek sisteminden gelen CSV'de ad ve telefon var. Ece ad ve telefon sütunlarını sildiğini ama metin içinde telefon geçen kayıtlar kaldığını söylüyor. Bunu doğruladım: GB-0084 ve GB-0120'de telefon numarası var (30. satır sonrası). Deniz ise rapora "gerçek alıntı" istiyor. | toplanti-notu.md, Mert / Deniz; slack-dokumu.md, Ece; CSV |
 
 ## 2. Açık noktalar
 
-| # | Konu | Kaynak |
-|---|---|---|
-| 2.1 | **Öncelik formülü.** Notta açık madde olarak duruyor. Deniz "kaç kişi × ne kadar mutsuz × ne kadar yeni" önerdi ama "emin değilim" dedi. | TN, Açık kalanlar; SD, Deniz |
-| 2.2 | **"Ne kadar yeni" ne demek?** Geri bildirimin tarihi mi, yoksa `segment = yeni` kullanıcı mı? İkisi de mümkün. | SD, Deniz ve Ece |
-| 2.3 | **"Ne kadar mutsuz" neyle ölçülecek?** `puan` sütunu mu, metnin tonu mu? Puanın her kanalda neyi ifade ettiği tanımlanmamış (bkz. 3.2). | SD, Deniz |
-| 2.4 | **Temaları kim, nasıl belirleyecek?** Deniz "temaları göreyim" diyor. Temaların önceden tanımlı bir liste mi olacağı, araçta mı çıkarılacağı konuşulmamış. | TN, Deniz |
-| 2.5 | **İngilizce yorumlar.** Selin sayılsın istiyor, karar yok. Türkçe temalarla aynı yere mi düşecekleri belli değil. | SD, Selin |
-| 2.6 | **Kişisel veri.** Açık madde olarak duruyor. Mert'in şartı "bir yere gitmediğinden emin olalım". Bunun dış kütüphane ya da harici servis kullanımını nasıl kısıtladığı tanımlanmamış. | TN, Mert ve Açık kalanlar |
-| 2.7 | **Dosya sıklığı ve birleştirme.** Ece CSV'nin haftalık ya da günlük gelebileceğini söyledi. Aracın tek dosya mı, birden çok dosya mı alacağı ve dönemler arası karşılaştırma isteyip istemediği belli değil. Destek, mağaza ve anket ayrı mı yüklenecek, Ece birleştirip mi verecek? O da netleşmedi. | TN, Ece |
-| 2.8 | **Çıktının kapsamı.** Deniz "ilk üç işi kanıtla seçmek" istiyor. Raporun ilk üç temayla mı sınırlı kalacağı, tüm temaları mı listeleyeceği belirsiz. | TN, Deniz |
-| 2.9 | **Demo tarihi ve kapsamı.** Mert "haftaya cuma demo yapabilir miyiz?" diye sordu, cevap verilmemiş. Varsayım: mesaj 6 Ekim'de yazıldıysa demo 16 Ekim, yönetim toplantısı 19 Ekim. | SD, Mert |
-| 2.10 | **Platform ve sürüm.** Mert, bildirim gecikmesinin Android 14 ve 5.2 sürümüyle başladığını düşünüyor. CSV'de platform sütunu yok; Ece doğruladı. Bu bilgi yalnızca bazı metinlerde geçiyor (GB-0011, GB-0016). | SD, Mert ve Ece |
+- **"Öncelik" neye göre?** Toplantıda açık kaldı. Deniz'in aklındaki formül "kaç kişi × ne kadar mutsuz × ne kadar yeni", ama kendisi de emin değil. Belirsiz olanlar:
+  - "Ne kadar yeni": kaydın tarihi mi, yoksa CSV'deki `segment = yeni` mi?
+  - "Ne kadar mutsuz": puan mı, metnin tonu mu?
+  - "Kaç kişi": kayıt sayısı mı, tekil kullanıcı mı? (Kaynak: toplanti-notu.md, açık kalanlar; slack-dokumu.md, Deniz)
+- **Kanal ağırlığı:** kararı kim verecek ve ne zaman? (toplanti-notu.md, açık kalanlar)
+- **Kişisel veri:** Mert verinin "bir yere gitmediğinden emin olalım" diyor. Aracın veriyi tarayıcı dışına hiç çıkarmaması mı kastediliyor, belli değil. Metin içindeki telefonların raporda görünüp görünmeyeceği de konuşulmamış. (toplanti-notu.md, Mert ve açık kalanlar; slack-dokumu.md, Ece)
+- **Temalar nereden gelecek?** Deniz "temaları göreyim" diyor. Tema listesinin önceden tanımlanması mı, aracın bulması mı beklendiği konuşulmamış. Bir kaydın birden çok temaya girip giremeyeceği de konuşulmamış. Örnek: GB-0020 hem bildirim gecikmesi hem iptal. GB-0021 hem iptal hem ödeme. (toplanti-notu.md, Deniz; CSV)
+- **İngilizce yorumlar:** Selin bunların "sayılsın" diyor. Türkçe yorumlarla aynı temalara mı sayılacakları, ayrı mı raporlanacakları belli değil. Ece'nin saydığı sütunlarda dil sütunu yok. (slack-dokumu.md, Selin; toplanti-notu.md, Ece)
+- **Platform/sürüm analizi:** Mert'in Android 14 / 5.2 hipotezi Radar'ın kapsamında mı, belli değil. Mevcut veriyle sınanamıyor. (slack-dokumu.md, Mert / Ece)
+- **Birden çok dosya:** Günlük ya da haftalık gelen dosyalar birleştirilecek mi? Aynı kayıt iki dosyada gelirse ne olacak? Rapor hangi dönemi kapsayacak (çeyrek mi, son 6 hafta mı)? (toplanti-notu.md, Ece / Deniz)
+- **Raporun içeriği:** Deniz'in istediği markdown ve her temaya 2-3 alıntı. Raporda kaç tema yer alacağı ve "ilk üç iş" önerisinin raporda olup olmayacağı yazmıyor. (toplanti-notu.md, Deniz)
+- **Demo tarihi ve kapsamı:** Mert "haftaya cuma" diye sordu, cevap yok. Hangi cuma olduğu, demoda neyin gösterileceği ve demonun pazartesi yönetim toplantısına girdi olup olmayacağı belli değil. (slack-dokumu.md, Mert)
+- **Kullanıcılar:** Aracı yalnız Deniz mi kullanacak, Selin ve Ece de mi? Notlarda yazmıyor. (*varsayım: yalnız Deniz*)
 
-## 3. Veri riskleri
+## 3. Veri riskleri (CSV)
 
-İlk 30 satıra baktım. Slack'teki iddiaları doğrulamak için dosyanın tamamında yalnızca telefon numarası ve İngilizce metin aradım. O kayıtlar ayrıca işaretli.
-
-| # | Risk | Kanıt |
-|---|---|---|
-| 3.1 | **Metinlerde telefon numarası var.** | Satır 30'dan sonra: GB-0110 "beni arayın 0532 555 12 34", GB-0111 "+90 555 987 65 43". Ece'nin söylediğini doğruluyor (SD). |
-| 3.2 | **Puan ölçeği kanaldan kanala farklı olabilir.** Toplantıda "NPS anketi" geçiyor. NPS genelde 0-10 ölçeğinde olur, CSV'deki anket puanları ise 1-5 arasında. Varsayım: anket puanı dönüştürülmüş olabilir. Destek kaydındaki puanın kaynağı da bilinmiyor. | TN, Deniz; CSV `puan` sütunu |
-| 3.3 | **Puan ile metin uyuşmuyor.** Şikâyet içeren kayıtlar yüksek puan almış. Puan mutsuzluk ölçüsü olarak kullanılırsa sonuç yanlış çıkar. | GB-0017 "gittik kapalıydı, destek de yardımcı olmadı" → 4; GB-0015 "50 TL kesilmiş" → 3; GB-0025 → 3 |
-| 3.4 | **Aynı metin tekrar ediyor.** Aynı kişi mi, kopya kayıt mı, farklı kişiler mi? Kullanıcı kimliği olmadığı için ayırt edilemiyor. "Kaç kişi söylüyor" sayısını şişirebilir. | GB-0010 ve GB-0014; GB-0004 ve GB-0023; GB-0012 ve GB-0028; GB-0009 ve GB-0021 |
-| 3.5 | **"Yine aynı sorun" ve "İkinci kez yaşıyorum" ifadeleri.** Tekrarlayan şikâyetin ayrı mı, tek mi sayılacağı belirsiz. Metinlerin aynı kalıplarla başlayıp bitmesi ("Şikâyetim şu:", "Lütfen düzeltin.", "Destek de yardımcı olmadı.") örnek verinin üretilmiş olabileceğini düşündürüyor; bu bir varsayım. Gerçek veride dağılım farklı olabilir. | Satır 1-30'da çok sayıda |
-| 3.6 | **Anahtar kelimeyle eşleştirme yanıltır.** "Bildirim gecikmesi yüzünden rezervasyonum iptal oldu" metninde "iptal" geçiyor ama konu bildirim gecikmesi. Bu yüzden 1.2'deki sayım, Selin'in beklentisini yapay olarak destekleyebilir. | GB-0009, GB-0021 |
-| 3.7 | **Mağaza kanalı tek bir değer.** App Store ile Google Play ayrılmamış. Platform yalnızca metinden okunabiliyor. | CSV `kanal` = anket / magaza / destek; TN, Deniz iki mağazayı ayrı saydı |
-| 3.8 | **Karışık dil.** İngilizce yorumlar var. | Satır 30'dan sonra: GB-0042, GB-0085 |
-| 3.9 | **Tarihler sıralı değil.** İlk 30 satır 2026-08-25 ile 2026-10-04 arasında karışık sırada. "Son 6 hafta" bilgisi tutuyor. | CSV `tarih`; SD, Ece |
-| 3.10 | **Türkçe karakter ve tırnaklı alanlar.** Virgül içeren metinler tırnak içinde, metinlerde ş, ı, ğ, â geçiyor. Ece'nin diğer kaynaklardan çevireceği dosyaların aynı kodlama ve ayırıcıyla geleceği doğrulanmadı. | CSV; TN, Ece |
-| 3.11 | **Ölçeğin doğrulanmamış bir ifadesi var.** Mert, ad ve telefon alanlarının "destek sisteminden öyle geldiğini" söylüyor. Mağaza ve anket dosyalarında başka kişisel alanlar olup olmadığı bilinmiyor. | TN, Mert |
+- **Metin içinde kişisel veri:** GB-0084'te "0532 555 12 34", GB-0120'de "+90 555 987 65 43" geçiyor (30. satır sonrası, tarama ile bulundu). Ece "birkaç kayıt" dediği için başka biçimlerde yazılmış numaralar da olabilir.
+- **Türkçe karakter tutarsızlığı:** Bazı metinlerde Türkçe karakter yok: "kartim reddedildi… Cok can sikici" (GB-0008), "Vejetaryen secenek" (GB-0012), "Bildirim izni acik" (GB-0009). Segment değeri de dosyada `duzenli` olarak geçiyor, Ece "düzenli" yazmış. Aynı kelime iki farklı yazımla geçiyor.
+- **Puan ile metin uyuşmuyor:** GB-0012 bir şikâyet ama puanı 4. GB-0022'de "1 yıldızı bile hak etmiyor" yazıyor ama puanı 2. GB-0017 şikâyet, puanı 3. Mutsuzluk puandan ölçülürse bu kayıtlar yanlış sınıflanabilir.
+- **Kalıp ifadeler ve tekrarlar:** "Çok can sıkıcı", "Merhaba, … Böyle olmamalı.", "Teşekkürler, … 👏" gibi ifadeler sık geçiyor. GB-0026 ve GB-0028 neredeyse aynı metin ("Taksit seçeneği görünmüyor"). Bunlar aynı kullanıcı mı, tekrarlanan kayıt mı, ayrı kişiler mi, bilinmiyor. *Varsayım: örnek veri kısmen üretilmiş olabilir.* Öyleyse gerçek veride tema dağılımı farklı çıkabilir.
+- **Yanıltıcı anahtar kelimeler:** GB-0020'de "rezervasyonum iptal oldu" geçiyor ama asıl konu bildirim gecikmesi. "İptal" kelimesi geçen her kaydı iptal ücreti saymak Selin'in beklediği sonucu yapay olarak şişirebilir.
+- **Olumlu kayıtlar:** GB-0002, 0014, 0016, 0019, 0025 gibi 5 puanlı övgüler de dosyada. Bunların önceliklendirmeye nasıl gireceği tanımlı değil.
+- **Biçim:** Bazı metinler tırnak içinde (virgül içerenler), bazıları tırnaksız. Emoji var (👏). Satırlar tarihe göre sıralı değil. İlk 30 satırdaki tarih aralığı 2026-08-24 ile 2026-10-03 arası. GB-0116 ise 2026-10-05 tarihli, yani toplantıdan sonra.
+- **Dil:** İlk 30 satırın hepsi Türkçe. GB-0116 İngilizce ("Great app for tourists…", 30. satır sonrası).
+- **Eksik boyutlar:** Platform, uygulama sürümü, dil ve mağaza ayrımı (App Store / Google Play) sütunları yok. Kayıtları kullanıcıya bağlayan bir alan da yok.
 
 ## 4. Sorulacak sorular (önem sırasıyla)
 
-1. **Deniz:** Öncelik neye göre hesaplanacak? Önerdiğin üç çarpandaki "ne kadar yeni" geri bildirimin tarihini mi, yeni kullanıcı segmentini mi kastediyor? "Ne kadar mutsuz" puandan mı okunacak? (2.1, 2.2, 2.3, 3.3)
-2. **Deniz:** Kanal ağırlığı kararını kim verecek? Selin'in önerisi mi, Ece'nin önerisi mi, yoksa kullanıcının değiştirebileceği bir ayar mı olacak? (1.1, 1.2)
-3. **Mert ve Deniz:** "Bir yere gitmesin" tam olarak ne demek? Harici kütüphane ya da servis kullanımı kabul edilecek mi? Rapordaki alıntılarda telefon numarası gibi bilgilerin görünmemesi şart mı? (1.6, 2.6, 3.1)
-4. **Ece:** Gerçek dosya hangi sütunlarla gelecek (ad ve telefon dahil mi, id her zaman var mı)? Üç kaynak tek dosyada mı birleşik gelecek? Haftalık ve günlük dosyalar birlikte mi yüklenecek? (1.5, 1.7, 2.7)
-5. **Ece:** `puan` sütunu anket, mağaza ve destekte aynı ölçekte mi? Anketteki NPS değeri nasıl dönüştürüldü? Destek kaydındaki puan nereden geliyor? (3.2)
-6. **Selin:** "Dün 14 iptal ücreti şikâyeti" sayısı hangi kaynaktan? Örnek dosyada günde yaklaşık 3,5 kayıt var; örnek gerçek hacmi temsil ediyor mu? (1.3, 1.4)
-7. **Deniz:** Temalar önceden tanımlı bir listeden mi gelecek, yoksa araç mı çıkaracak? İngilizce yorumlar Türkçe temalarla aynı yere mi sayılacak? (2.4, 2.5, 3.8)
-8. **Deniz ve Mert:** Demo 16 Ekim'de mi? Demoda neyin gösterilmesi bekleniyor: tam rapor mu, yalnızca ilk üç tema mı? (2.8, 2.9)
-
-Sınır dışı kalan konu: platform ve sürüm bilgisi (2.10). Mert'in hipotezi için önemli ama 8 soru sınırına girmedi.
+1. **Deniz:** Öncelik formülündeki "ne kadar yeni" kaydın tarihi mi, `segment = yeni` mi? "Ne kadar mutsuz" puandan mı ölçülecek? Puan ile metin çeliştiğinde (GB-0012, GB-0022) hangisi geçerli?
+2. **Deniz:** Kanal ağırlığında Selin'le Ece farklı düşünüyor. Kararı kim verecek ve demodan önce verilecek mi?
+3. **Mert + Deniz:** "Bir yere gitmesin" ne demek? Veri tarayıcıdan hiç çıkmamalı mı? Yönetime giden alıntılarda metin içindeki telefon numaraları görünebilir mi?
+4. **Ece:** 150 satır bütün kayıtlar mı, örneklem mi? Selin'in "günde 14 iptal şikâyeti" sayısıyla nasıl bağdaşıyor? Örnek metinler gerçek kayıt mı?
+5. **Ece:** Anket puanı NPS'ten (0-10) 1-5'e çevrildi mi? Destek kayıtlarındaki puan nereden geliyor? Üç kanalın puanı aynı anlama mı geliyor?
+6. **Deniz:** Temalar sabit bir listeden mi gelecek, araç mı bulacak? Bir kayıt birden çok temaya sayılabilir mi?
+7. **Selin + Ece:** İngilizce yorumlar Türkçe temalarla birlikte mi sayılacak? Mert'in sorduğu platform ve sürüm bilgisi ya da bir dil sütunu dışa aktarıma eklenebilir mi?
+8. **Mert + Deniz:** Demo hangi cuma? Demoda gerçek veri mi kullanılacak, örnek veri mi? Demo pazartesi yönetim toplantısına girdi olacak mı?
 
 ---
 
-**Neyi kaçırmış olabilirim:** Dosyanın 31-150 arası satırlarına yalnızca telefon numarası ve İngilizce kelime araması yaptım. Tam bir profil çıkarmadım (boş alan, puan dağılımı, yinelenen id); bunun için yazdığım betik izin ekranında reddedildi. Boş alan ya da geçersiz değer olsaydı ilk 30 satırda göremezdim.
-
-**En zayıf iddiam:** 1.2'deki 12'ye 8 sayımı. Elle saydım ve hangi kaydın hangi temaya ait olduğu benim yorumum. 3.6'daki sorun bu sayımı da etkiliyor.
-
-**Gerekçesiz kalan kararım:** 4'teki önem sırası. Öncelik formülünü ve ağırlığı en üste koydum, çünkü sonucu en çok onlar değiştiriyor. Kişisel veri sorusu ise teknik kısıt koyduğu için 1. sıraya da çıkabilirdi.
+- **Neyi kaçırmış olabilirim:** CSV'nin 31-150. satırlarını okumadım, yalnız telefon ve İngilizce kelime aradım. Telefon taramasındaki desen yalnız 05xx ve +90 biçimini yakalıyor, başka biçimde yazılmış numaralar gözden kaçmış olabilir.
+- **En zayıf iddiam:** 1.2'deki 5'e 5 sayım. Kayıtları temalara ben elle ayırdım; örneğin GB-0021'i iptal ücretine saymak tartışılabilir.
+- **Gerekçesiz kararım:** Sorulardaki önem sıralaması bana ait. Öncelik tanımını en üste koydum çünkü toplantı notunda "açık kalanlar" arasında geçiyor ve çıkan sıralamanın tamamı ona bağlı. Ama bu sıralamaya ekip birlikte karar vermedi. Bu metin için slop-check'i çalıştırmadım.

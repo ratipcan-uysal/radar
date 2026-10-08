@@ -1,99 +1,44 @@
-İnceleme kapsamı: İki not dosyasının tamamı ve CSV’nin ilk 30 fiziksel satırı: başlık + **GB-0001–GB-0029 arasındaki 29 kayıt**. CSV’nin tamamı hakkında sonuç çıkarmıyorum. **Güven düzeyi: yüksek**; aşağıdaki belirsizlikler, kaynaklarda yanıtı bulunmayan konulardır.
-
 ## 1. Çelişkiler
 
-- **Kanal ağırlığı konusunda doğrudan görüş ayrılığı var.** Selin, mağaza yorumlarının görünürlük ve mağaza puanına etkisi nedeniyle daha ağır sayılmasını istiyor. Ece, tüm kanalların eşit sayılmasını savunuyor. Hangisi geçerli olacak?  
-  **Kaynak:** `toplanti-notu.md` — Selin, Ece.
+- **Kanal ağırlığında doğrudan görüş ayrılığı var.** Selin, mağaza yorumlarının herkes tarafından görülmesi ve puanı etkilemesi nedeniyle daha ağır sayılmasını istiyor. Ece, kanalların eşit sayılmasını savunuyor; ağırlık vermenin sonucu yönlendireceğini düşünüyor. Hangi yaklaşımın geçerli olduğu karara bağlanmamış. **Kaynak:** `toplanti-notu.md` — Selin, Ece. **Güven: yüksek.**
+- **Önceliklendirme sonucuna ilişkin beklentiler farklı.** Deniz ilk üç işi kanıtla seçmek istiyor ve Slack’te düşündüğü formülden emin olmadığını söylüyor. Selin ise iptal ücretinin birinci çıkmamasını aracın yanlış çalıştığının göstergesi sayıyor. Bu, kesin bir mantıksal çelişki değil; sonucu verinin mi belirleyeceği, yoksa önceden beklenen bir sıralamanın mı doğrulanacağı konusunda gerilim. **Kaynak:** `toplanti-notu.md` — Deniz; `slack-dokumu.md` — Deniz, Selin. **Güven: yüksek.**
 
-- **Veriden öncelik çıkarma amacı ile önceden belirlenen birincilik beklentisi arasında gerilim var.** Deniz, gelecek çeyreğin ilk üç işini kanıtla seçmek istiyor; Slack’te öncelik hesabı konusunda emin olmadığını söylüyor. Selin ise iptal ücreti en üstte çıkmazsa aracın yanlış çalışacağını söylüyor. Sonucun doğruluğu hangi ölçüte göre değerlendirilecek? Bu, kesin bir mantıksal çelişki değil; başarı beklentilerinin uyuşmadığı bir nokta.  
-  **Kaynak:** `toplanti-notu.md` — Deniz; `slack-dokumu.md` — Deniz, Selin.
-
-**Çelişki sayılmayan ayrımlar:** Selin’in destek kayıtlarında iptal ücretini, Mert’in mağaza yorumlarında bildirim gecikmesini daha çok görmesi farklı kaynaklara dayanıyor. Ece’nin haftalık aktarım yapabildiğini ve günlük dosyaların da gelebileceğini söylemesi de birbirini dışlamıyor.  
-**Kaynak:** `toplanti-notu.md` — Selin, Mert, Ece.
+Selin’in destek kayıtlarında iptal ücretini, Mert’in mağaza yorumlarında bildirim gecikmesini daha çok görmesi tek başına çelişki değildir: farklı kanallardan söz ediyorlar. **Kaynak:** `toplanti-notu.md` — Selin, Mert.
 
 ## 2. Açık noktalar
 
-- **“Öncelik” tanımlanmamış.** Deniz’in “kaç kişi söylüyor × ne kadar mutsuz × ne kadar yeni” ifadesi kesinleşmiş karar değil. Kişi sayısı, mutsuzluk ve yenilik hangi verilerden, hangi hesapla ölçülecek?  
-  **Kaynak:** `slack-dokumu.md` — Deniz; `toplanti-notu.md` — açık kalanlar, belirli konuşmacı belirtilmemiş.
-
-- **Çeyrek planlaması için değerlendirme dönemi belirsiz.** Örnek dosyanın son altı haftayı kapsadığı söyleniyor; amaç ise gelecek çeyreğin ilk üç işini seçmek. Hangi tarih aralığı değerlendirilecek ve “yeni” hangi tarihe göre hesaplanacak?  
-  **Kaynak:** `toplanti-notu.md` — Deniz; `slack-dokumu.md` — Ece, Deniz.
-
-- **Tema sınırları belirsiz.** Görülen kayıtlarda ücretin kaldırılması, ücretin önceden açıklanması, iptal politikasının bulunamaması ve iade talepleri var. Bunlar aynı tema mı, ayrı sorunlar mı? Bir kayıtta hem asıl sorun hem destek şikâyeti varsa kaç temaya sayılacak?  
-  **Kaynak:** `ornek-geri-bildirim.csv` — geri bildirim sahipleri, kimlikleri belirtilmemiş; GB-0003, GB-0004, GB-0005, GB-0024, GB-0025. `toplanti-notu.md` — Deniz.
-
-- **Olumlu geri bildirimlerin rolü belirsiz.** Araç “kullanıcı ne istiyor” sorusuna yanıt verecek; örnekte övgüler de bulunuyor. Bunlar tema ve öncelik hesabına nasıl dahil edilecek?  
-  **Kaynak:** `toplanti-notu.md` — Deniz; `ornek-geri-bildirim.csv` — kimliği belirtilmemiş geri bildirim sahipleri, GB-0006, GB-0018, GB-0020.
-
-- **İngilizce yorumlar için beklenti kısmen belirtilmiş.** Selin bunların sayılmasını istiyor. Türkçe ve İngilizce aynı sorunu anlatan yorumlar aynı temada mı değerlendirilecek; raporda alıntılar hangi dilde olacak?  
-  **Kaynak:** `slack-dokumu.md` — Selin; `toplanti-notu.md` — Deniz.
-
-- **Tarayıcıda çalışma kararı kişisel veri sorusunu kapatmıyor.** Sunucu olmayacağı kararlaştırılmış; Mert verinin bir yere gitmediğinden emin olunmasını istiyor. İşleme, saklama ve rapora aktarma açısından kabul edilen sınırlar neler?  
-  **Kaynak:** `toplanti-notu.md` — Mert, Deniz ve kararlar bölümü; `slack-dokumu.md` — Ece.
-
-- **Tekrarlanan dosya yüklemelerinin anlamı belirsiz.** Günlük veya haftalık dosyalar gelebiliyor. Dosyalar yeni kayıtları mı, önceki kayıtları da mı içeriyor; yeni yükleme önceki verinin yerini mi alacak, ona mı eklenecek?  
-  **Kaynak:** `toplanti-notu.md` — Ece.
-
-- **CSV kabul koşulları belirlenmemiş.** Ece beş ortak sütun sayıyor; örnek dosyada ayrıca `id` bulunuyor. Zorunlu sütunlar, geçerli değerler ve eksik/geçersiz kayıtların nasıl ele alınacağı nedir?  
-  **Kaynak:** `toplanti-notu.md` — Ece; `ornek-geri-bildirim.csv` — başlık satırı, dosyayı paylaşan Ece.
-
-- **Raporun karar vermek için göstereceği kanıt belirsiz.** Markdown ve tema başına iki–üç gerçek alıntı istenmiş. Öncelik sırasının gerekçesi ve alıntıların seçim ölçütü tanımlanmış mı?  
-  **Kaynak:** `toplanti-notu.md` — Deniz.
-
-- **Demo talebi kesinleşmiş kapsam veya tarih değil.** Mert “haftaya cuma” demo soruyor ve yönetim toplantısının pazartesi olduğunu söylüyor; dökümde yanıt yok. Hangi takvim tarihi ve hangi tamamlanmış davranışlar bekleniyor?  
-  **Kaynak:** `slack-dokumu.md` — Mert; döküm başlığı 4–6 Ekim, mesajların günleri ayrı belirtilmemiş.
+- **“Öncelik” tanımlanmamış.** Deniz’in “kaç kişi söylüyor × ne kadar mutsuz × ne kadar yeni” ifadesi kesin karar değil. Üç bileşenin nasıl ölçüleceği, kanal ağırlığının bunlarla ilişkisi ve eşit sonuçların nasıl yorumlanacağı belirsiz. **Kaynak:** `toplanti-notu.md` — Deniz, Ece, Selin; `slack-dokumu.md` — Deniz.
+- **Tema sınırları ve kapsamı belirsiz.** Temaların nasıl tanımlanacağı, bir kaydın birden fazla temaya girip giremeyeceği, olumlu geri bildirimlerin ve özellik taleplerinin önceliklendirmedeki yeri belirtilmemiş. **Kaynak:** `toplanti-notu.md` — Deniz; `ornek-geri-bildirim.csv` — GB-0002, GB-0018, GB-0029; kayıt yazarları belirtilmemiş, dosyayı paylaşan Ece.
+- **İngilizce yorumların sayılması isteniyor; nasıl yorumlanacağı açıklanmamış.** Aynı konudaki Türkçe ve İngilizce kayıtların tema ve öncelik bakımından nasıl ele alınacağı belirsiz. **Kaynak:** `slack-dokumu.md` — Selin; `toplanti-notu.md` — Deniz’in tema beklentisi.
+- **Veri aktarım sınırı net değil.** Tarayıcıda çalışma ve sunucu kurmama kararlaştırılmış; Mert verinin bir yere gitmediğinden emin olunmasını istiyor. Bu isteğin bağlayıcı bir koşul olup olmadığı ve tarayıcıda açılan verinin saklanmasına ilişkin beklenti belirtilmemiş. **Kaynak:** `toplanti-notu.md` — kararlar bölümü, karar sahipleri ayrı belirtilmemiş; Deniz, Mert.
+- **Kişisel verinin rapora taşınması konusu açık.** Metinlerde telefon bulunduğu söyleniyor; raporda gerçek alıntılar isteniyor. Bu alıntılarda kişisel veri bulunması durumunda kabul edilebilir çıktı tanımlanmamış. **Kaynak:** `slack-dokumu.md` — Ece; `toplanti-notu.md` — Deniz, Mert.
+- **CSV kabul koşulları tanımlanmamış.** Ece ortak sütunlara dönüştürebileceğini söylüyor; zorunlu alanlar, alan anlamları, eksik veya geçersiz kayıtların durumu ve desteklenecek veri büyüklüğü belirtilmemiş. **Kaynak:** `toplanti-notu.md` — Ece, Deniz; `slack-dokumu.md` — Ece.
+- **Zaman penceresi ve dosyaların ilişkisi belirsiz.** CSV’ler günlük veya haftalık gelebilir. Yeni dosyanın önceki dosyanın yerine mi geçeceği, kayıtların birikerek mi değerlendirileceği ve çeyrek planlamasında hangi dönemin esas alınacağı açıklanmamış. **Kaynak:** `toplanti-notu.md` — Ece, Deniz; `slack-dokumu.md` — Ece’nin “son 6 hafta” açıklaması.
+- **Platforma ilişkin değerlendirme beklentisi açık.** Mert, bildirim gecikmesini Android 14 ve sürüm 5.2 ile ilişkilendiriyor; bunu “bence” diye ifade ediyor. Ece platform alanının olmadığını söylüyor. Bu hipotezin Radar kapsamında incelenmesinin beklenip beklenmediği belli değil. **Kaynak:** `slack-dokumu.md` — Mert, Ece.
+- **Raporun kabul ölçütleri sınırlı.** Markdown ve tema başına iki üç gerçek alıntı belirtilmiş; alıntı seçiminin ölçütü, önceliği destekleyecek kanıtın içeriği ve yeterli alıntı bulunmayan temaların durumu açıklanmamış. **Kaynak:** `toplanti-notu.md` — Deniz.
+- **Demo talebi kesinleşmiş teslim tarihi değil.** Mert “haftaya cuma” demo istiyor ve yönetim toplantısının pazartesi olduğunu söylüyor. Talebin kabulü, kesin takvim tarihleri ve demoda beklenen kapsam kayıtlarda yok. **Kaynak:** `slack-dokumu.md` — Mert.
 
 ## 3. Veri riskleri
 
-- **Kayıt sayısı, kişi sayısı olarak doğrulanamıyor.** CSV’de `id` var; kullanıcı kimliği yok. Aynı kişinin birden fazla geri bildirimi veya kanalı kullanıp kullanmadığı görülemiyor. Deniz’in “kaç kişi söylüyor” ölçütü bu dosyadan nasıl çıkarılacak?  
-  **Kaynak:** `ornek-geri-bildirim.csv` — başlık satırı, dosyayı paylaşan Ece; `slack-dokumu.md` — Deniz.
+**İnceleme sınırı:** CSV’nin ilk 30 fiziksel satırı incelendi: başlık ve **29 geri bildirim kaydı**. Aşağıdaki gözlemler bütün dosyayı temsil ettiği iddiasını taşımıyor. CSV’de kayıt yazarlarının adları yok; Ece dosyayı paylaşan kişi. **Kaynak:** `ornek-geri-bildirim.csv` — başlık, GB-0001–GB-0029; `slack-dokumu.md` — Ece.
 
-- **Puanın kanallar arasında aynı şeyi ölçtüğü belirtilmemiş.** Destek, mağaza ve anket kayıtlarında `puan` bulunuyor. NPS anketinden de söz ediliyor; fakat örnekteki anket puanlarının anlamı açıklanmıyor. Bu değerler karşılaştırılabilir mi?  
-  **Kaynak:** `toplanti-notu.md` — Deniz, Ece; `ornek-geri-bildirim.csv` — başlık ve GB-0001–GB-0029, kimliği belirtilmemiş geri bildirim sahipleri.
-
-- **Puan ile metindeki olumsuzluk her zaman örtüşmüyor.** GB-0017, restoranın kapalı olduğunu ve desteğin yardımcı olmadığını söylüyor; puanı 4. GB-0027’de “1 yıldızı bile hak etmiyor” yazarken puan 2. Mutsuzluk değerlendirmesinde hangi bilgi esas alınacak?  
-  **Kaynak:** `ornek-geri-bildirim.csv` — kimliği belirtilmemiş geri bildirim sahipleri, GB-0017, GB-0027.
-
-- **Benzer metinler var; mükerrer oldukları kanıtlanmıyor.** GB-0009 ile GB-0021 bildirim gecikmesi nedeniyle rezervasyon iptalini; GB-0012 ile GB-0028 yirmi dakika geç gelen bildirimi anlatıyor. Bunlar bağımsız deneyimler mi, tekrar kayıtlar mı?  
-  **Kaynak:** `ornek-geri-bildirim.csv` — kimliği belirtilmemiş geri bildirim sahipleri, belirtilen kayıtlar.
-
-- **Kişisel veri riski sütunların silinmesiyle bitmemiş.** Ece, metinlerde telefon bulunan birkaç kayıt kaldığını söylüyor. İncelenen ilk 29 kayıtta açık bir telefon numarası görülmüyor; bu, dosyanın tamamında bulunmadığını göstermiyor. Bu metinler gerçek alıntı olarak rapora girebilir mi?  
-  **Kaynak:** `slack-dokumu.md` — Ece; `toplanti-notu.md` — Mert, Deniz; `ornek-geri-bildirim.csv` — incelenen kayıtlar.
-
-- **Platform ve sürüm bilgileri yapılandırılmış değil.** `segment`, yeni/düzenli/kurumsal anlamına geliyor; platform yok. Bazı metinlerde Android veya 5.2 geçiyor, ancak Android 14 bağlantısını doğrulayacak bir alan bulunmuyor. Mert’in teknik açıklaması açıkça kendi tahmini.  
-  **Kaynak:** `slack-dokumu.md` — Mert, Ece; `ornek-geri-bildirim.csv` — GB-0011, GB-0016, kimliği belirtilmemiş geri bildirim sahipleri.
-
-- **Mağaza kaynağı ayrıştırılmıyor.** App Store ve Google Play ayrı kaynaklar olarak anılıyor; CSV’de ikisi için ayrı sütun veya değer görünmüyor, yalnız `magaza` var. Bu ayrım değerlendirmede gerekli mi?  
-  **Kaynak:** `toplanti-notu.md` — Deniz; `ornek-geri-bildirim.csv` — başlık ve `kanal` değerleri, dosyayı paylaşan Ece.
-
-- **Tarihlerin anlamı ve sırası belirsiz.** İlk kayıtların tarihleri kronolojik sıralı değil. `tarih` olay, yorum veya dışa aktarma tarihi mi? Yenilik hesabında hangisi kullanılacak?  
-  **Kaynak:** `ornek-geri-bildirim.csv` — GB-0001–GB-0005, kimliği belirtilmemiş geri bildirim sahipleri; `slack-dokumu.md` — Deniz.
-
-- **Örneğin temsil gücü açıklanmamış.** Ece 150 satır ve son altı hafta bilgisini veriyor; kayıtların nasıl seçildiği ve kanalların kapsama oranı belirtilmiyor. Frekans farkları kullanıcı taleplerini mi, veri toplama farklarını mı yansıtıyor?  
-  **Kaynak:** `slack-dokumu.md` — Ece; `toplanti-notu.md` — Selin, Mert, Ece.
+- **Kayıt sayısı, benzersiz kişi sayısını göstermiyor.** `id` alanı var; kullanıcı kimliği yok. Aynı kişinin birden fazla kaydı veya farklı kanallarda geri bildirimi bulunup bulunmadığı bu alanlardan anlaşılamıyor. Deniz’in “kaç kişi” ölçütü bu nedenle tanımsız kalıyor. **Kaynak:** `ornek-geri-bildirim.csv` — başlık; kayıt yazarları belirtilmemiş; `slack-dokumu.md` — Deniz, Ece.
+- **Puanların anlamı ve kanallar arasında karşılaştırılabilirliği bilinmiyor.** İncelenen kayıtlarda destek, mağaza ve anket için 1–5 aralığında değerler var. Notlarda NPS’ten söz ediliyor; CSV puanının NPS ile ilişkisi veya dönüştürülüp dönüştürülmediği açıklanmıyor. **Kaynak:** `ornek-geri-bildirim.csv` — GB-0001, GB-0002, GB-0004; kayıt yazarları belirtilmemiş; `toplanti-notu.md` — Deniz, Ece.
+- **Metin ile puan aynı mutsuzluk düzeyini açıkça göstermiyor.** GB-0012, menüde bulunmayan vejetaryen seçenekten şikâyet ederken puanı 4. GB-0022, “1 yıldızı bile hak etmiyor” derken puanı 2. Öncelik hesabında hangi bilginin ne anlama geldiği net değil. **Kaynak:** `ornek-geri-bildirim.csv` — GB-0012, GB-0022; kayıt yazarları belirtilmemiş, dosyayı paylaşan Ece.
+- **Kişisel veri riski sütunlarla sınırlı değil.** Ece, ad ve telefon sütunlarını sildiğini, metinlerde birkaç telefon kaldığını söylüyor. İncelenen ilk 29 kayıtta açık bir telefon numarası görünmüyor; bu, dosyanın kalanında bulunmadığını göstermiyor. **Kaynak:** `slack-dokumu.md` — Ece; `ornek-geri-bildirim.csv` — GB-0001–GB-0029, kayıt yazarları belirtilmemiş.
+- **Platform ve uygulama sürümü yok.** Başlıkta bu alanlar bulunmuyor; `segment` değerleri `yeni`, `duzenli`, `kurumsal`. Mert’in Android 14/sürüm 5.2 hipotezi bu örneğin yapılandırılmış alanlarıyla sınanamıyor. **Kaynak:** `ornek-geri-bildirim.csv` — başlık ve segment alanı; kayıt yazarları belirtilmemiş; `slack-dokumu.md` — Mert, Ece.
+- **Tarih alanının anlamı belirsiz ve satırlar tarih sırasına göre değil.** Örneğin GB-0004, 1 Ekim; ardından gelen GB-0005, 25 Ağustos tarihli. `tarih` alanının olay, yorum veya dışa aktarma tarihi olduğu belirtilmemiş; “ne kadar yeni” hesabının dayanağı açık değil. **Kaynak:** `ornek-geri-bildirim.csv` — GB-0004, GB-0005; kayıt yazarları belirtilmemiş; `slack-dokumu.md` — Deniz.
+- **Benzer metinlerin ayrı olay mı, tekrar mı olduğu bilinmiyor.** GB-0026 ve GB-0028 taksit seçeneğinin görünmemesinden söz ediyor; tarihleri ve segmentleri farklı. Bunların yinelenen kayıt olduğu sonucuna varılamaz; yalnızca kayıt kimliğinin kapsamı açıklanmamış. **Kaynak:** `ornek-geri-bildirim.csv` — GB-0026, GB-0028; kayıt yazarları belirtilmemiş, dosyayı paylaşan Ece.
+- **Metinler biçim ve içerik bakımından çeşitli.** Türkçe karakterli ve karaktersiz yazımlar, emojiler, olumlu yorumlar, şikâyetler ve özellik talepleri birlikte bulunuyor. İlk 29 kayıtta İngilizce yorum görünmüyor; Selin’in belirttiği İngilizce kapsam bu örnek bölümde gözlemlenemiyor. **Kaynak:** `ornek-geri-bildirim.csv` — GB-0002, GB-0008, GB-0018, GB-0029; kayıt yazarları belirtilmemiş; `slack-dokumu.md` — Selin.
+- **Bu örnekten kanal genelindeki sıklık çıkarılamaz.** Ece dosyayı 150 satır ve son altı hafta olarak tanımlıyor; seçilme yöntemi ve kanallardaki tüm geri bildirimleri kapsayıp kapsamadığı belirtilmemiş. Selin ve Mert’in sıklık gözlemleri ilk 29 kayıt üzerinden doğrulanamaz. **Kaynak:** `slack-dokumu.md` — Ece; `toplanti-notu.md` — Selin, Mert; `ornek-geri-bildirim.csv` — incelenen bölüm, kayıt yazarları belirtilmemiş.
 
 ## 4. Sorulacak sorular
 
-1. **Deniz, Selin ve Ece’ye:** Öncelik sırasını hangi kesin ölçüt belirleyecek; kanal ağırlıkları ne olacak ve iptal ücretinin birinci çıkması bir kabul koşulu mu?  
-   **Kaynak:** `toplanti-notu.md` — Deniz, Selin, Ece; `slack-dokumu.md` — Deniz, Selin.
-
-2. **Deniz, Mert ve Ece’ye:** Kişisel verinin işlenmesi, saklanması, tarayıcı dışına çıkması ve yönetim raporundaki gerçek alıntılarda bulunması için kabul edilen sınırlar neler?  
-   **Kaynak:** `toplanti-notu.md` — Deniz, Mert; `slack-dokumu.md` — Ece.
-
-3. **Ece’ye:** Dosya bağımsız kişileri saymaya elverişli mi; tekrar kayıtları nasıl tanıyoruz ve yeni CSV’ler önceki kayıtları da içeriyor mu?  
-   **Kaynak:** `ornek-geri-bildirim.csv` — başlık, GB-0009, GB-0012, GB-0021, GB-0028; `toplanti-notu.md` — Ece.
-
-4. **Ece ve Deniz’e:** Her kanaldaki `puan` ve `tarih` tam olarak neyi ifade ediyor; mutsuzluk ve yenilik hangi dönem ve veriler üzerinden ölçülecek?  
-   **Kaynak:** `toplanti-notu.md` — Deniz, Ece; `slack-dokumu.md` — Deniz; `ornek-geri-bildirim.csv` — GB-0017, GB-0027.
-
-5. **Deniz ve Selin’e:** Tema sınırları ne olacak; aynı kayıttaki birden fazla sorun, olumlu geri bildirimler ve İngilizce yorumlar sayımda nasıl değerlendirilecek?  
-   **Kaynak:** `toplanti-notu.md` — Deniz; `slack-dokumu.md` — Selin; `ornek-geri-bildirim.csv` — GB-0003, GB-0006, GB-0018, GB-0025.
-
-6. **Ece ve Mert’e:** Kabul edilecek CSV alanları ve geçerli değerler neler; eksik/geçersiz kayıtlar için beklenti ne ve platform, sürüm, mağaza ayrımı bu çalışmanın kapsamında mı?  
-   **Kaynak:** `toplanti-notu.md` — Ece; `slack-dokumu.md` — Ece, Mert; `ornek-geri-bildirim.csv` — başlık.
-
-7. **Deniz’e:** Markdown raporunda öncelik sırasını destekleyen hangi kanıtlar bekleniyor ve tema başına iki–üç gerçek alıntı hangi ölçüte göre seçilecek?  
-   **Kaynak:** `toplanti-notu.md` — Deniz.
-
-8. **Deniz ve Mert’e:** Demo hangi kesin tarihte yapılacak ve o tarihte hangi davranışların tamamlanmış olması gerekiyor?  
-   **Kaynak:** `slack-dokumu.md` — Mert.
+1. **Deniz, Selin ve Ece’ye:** Önceliğin bağlayıcı tanımı nedir; kanal ağırlığı nasıl belirlenecek ve iptal ücretinin birinci çıkması zorunlu bir kabul koşulu mu? **Kaynak:** `toplanti-notu.md` — Deniz, Selin, Ece; `slack-dokumu.md` — Deniz, Selin.
+2. **Deniz, Mert ve Ece’ye:** Verinin cihaz dışına çıkmasına, tarayıcıda saklanmasına ve gerçek alıntılarla yönetim raporuna taşınmasına ilişkin sınırlar nelerdir; metin içindeki telefonlar bu sınırlar içinde nasıl değerlendiriliyor? **Kaynak:** `toplanti-notu.md` — Deniz, Mert; `slack-dokumu.md` — Ece.
+3. **Ece ve Deniz’e:** “Kaç kişi” hangi veriden hesaplanacak; `id` neyi tanımlıyor ve aynı kişinin farklı kayıtları veya kanalları arasında ilişki kurulabiliyor mu? **Kaynak:** `slack-dokumu.md` — Deniz, Ece; `ornek-geri-bildirim.csv` — başlık, kayıt yazarları belirtilmemiş.
+4. **Ece ve Deniz’e:** Her kanaldaki `puan` neyi ölçüyor, NPS ile ilişkisi ne ve puan ile metin farklı mutsuzluk düzeyleri gösterdiğinde hangi yorum geçerli? **Kaynak:** `toplanti-notu.md` — Deniz, Ece; `ornek-geri-bildirim.csv` — GB-0012, GB-0022, kayıt yazarları belirtilmemiş.
+5. **Deniz ve Selin’e:** Tema kapsamı nedir; olumlu yorumlar, özellik talepleri, birden fazla sorun içeren kayıtlar ve İngilizce yorumlar önceliklendirmeye nasıl dâhil edilecek? **Kaynak:** `toplanti-notu.md` — Deniz; `slack-dokumu.md` — Selin; `ornek-geri-bildirim.csv` — GB-0002, GB-0018, kayıt yazarları belirtilmemiş.
+6. **Ece ve Deniz’e:** Kabul edilecek CSV’nin alan anlamları, zorunlu alanları, geçersiz kayıt koşulları ve boyut sınırı nedir; `tarih` neyi gösteriyor ve günlük/haftalık dosyalar hangi değerlendirme dönemini oluşturuyor? **Kaynak:** `toplanti-notu.md` — Ece, Deniz; `slack-dokumu.md` — Ece.
+7. **Mert ve Deniz’e:** Android 14/sürüm 5.2 hipotezini incelemek Radar’ın kapsamına giriyor mu; platform ve sürüm bulunmayan mevcut veriyle hangi sonuç bekleniyor? **Kaynak:** `slack-dokumu.md` — Mert, Ece.
+8. **Deniz ve Mert’e:** Demo talebi kabul edildi mi, kesin demo ve yönetim toplantısı tarihleri nedir; demoda ve Markdown raporunda hangi içerik tamamlanmış sayılacak? **Kaynak:** `slack-dokumu.md` — Mert; `toplanti-notu.md` — Deniz.
