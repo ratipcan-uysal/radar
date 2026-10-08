@@ -5,6 +5,7 @@ import { runInNewContext } from 'node:vm';
 import { analizEtAlintili } from '../src/analiz.js';
 import { sozlukHazirla } from '../src/sozluk.js';
 import { panoCiz } from '../src/pano.js';
+import { raporMetni, dosyaAdi } from '../src/rapor.js';
 import { eleman } from './sahte-dom.js';
 import { fixture, ornekCsv } from './yardimci.js';
 
@@ -23,19 +24,32 @@ function ekran(fetchTaklidi = sozlukYaniti) {
   const durum = eleman();
   const pano = eleman();
   let degisim;
+  let indir;
+  const indirmeler = [];
+  const bloblar = [];
+  const kaldirilanlar = [];
+  const raporIndir = { disabled: true, addEventListener(tur, fn) { assert.equal(tur, 'click'); indir = fn; } };
   const girdi = { files: [], addEventListener(tur, fn) { assert.equal(tur, 'change'); degisim = fn; } };
   const document = {
-    getElementById(id) { return { dosya: girdi, durum, pano }[id]; },
-    createElement() { return eleman(); },
+    getElementById(id) { return { dosya: girdi, durum, pano, 'rapor-indir': raporIndir }[id]; },
+    body: { append() {} },
+    createElement(tur) {
+      if (tur !== 'a') return eleman();
+      return { click() { indirmeler.push({ href: this.href, download: this.download }); }, remove() {} };
+    },
   };
   class SabitTarih extends Date {
     constructor() { super(2026, 9, 8, 12); }
   }
   runInNewContext(kaynak.replace(/^import .*;\n/gm, ''), {
-    document, analizEtAlintili, sozlukHazirla, panoCiz, fetch: fetchTaklidi, Date: SabitTarih,
+    document, analizEtAlintili, sozlukHazirla, panoCiz, raporMetni, dosyaAdi,
+    fetch: fetchTaklidi, Date: SabitTarih, Blob,
+    URL: { createObjectURL(blob) { bloblar.push(blob); return 'blob:rapor'; },
+      revokeObjectURL(adres) { kaldirilanlar.push(adres); } },
+    setTimeout(fn) { fn(); },
   });
   return {
-    durum, pano,
+    durum, pano, raporIndir, indirmeler, bloblar, kaldirilanlar, indir: () => indir(),
     yukle(metin) {
       girdi.files = metin === null ? [] : [{ text: typeof metin === 'function' ? metin : async () => metin }];
       return degisim();
@@ -58,6 +72,35 @@ test('pano: gerçek CSV sayımları ve K44 nedenleri textContent ile, ham alınt
   assert.match(metin, baslik(7, 'Sadakat puanı kaybı', '6,0', 2, '3,0'));
   assert.doesNotMatch(metin, /0532|987 65|kişi/);
   assert.doesNotMatch(kaynak, /innerHTML|toISOString/);
+});
+
+test('rapor: düğme analiz tamamlanınca açılır; Blob doğru ad ve içerikle ağ isteği olmadan iner', async () => {
+  let istek = 0;
+  const ui = ekran(async () => { istek++; return sozlukYaniti(); });
+  assert.equal(ui.raporIndir.disabled, true);
+  ui.indir();
+  assert.equal(ui.indirmeler.length, 0);
+  await ui.yukle(ornekCsv);
+  assert.equal(ui.raporIndir.disabled, false);
+  ui.indir();
+  assert.equal(istek, 1);
+  assert.deepEqual(ui.indirmeler, [{ href: 'blob:rapor', download: 'radar-raporu-2026-10-05.md' }]);
+  assert.equal(ui.bloblar[0].type, 'text/markdown;charset=utf-8');
+  assert.equal(await ui.bloblar[0].text(), raporMetni(analizEtAlintili(ornekCsv, sozlukHazirla(sozlukMetni), '2026-10-08')));
+  assert.deepEqual(ui.kaldirilanlar, ['blob:rapor']);
+});
+
+test('rapor: yeni seçim, ret, boş sonuç ve okuma hatası eski raporu indirtmez', async () => {
+  const ui = ekran();
+  for (const metin of [null, 'ad,telefon\nx,y', fixture('GB-0140'), async () => { throw new Error('okuma hatası'); }]) {
+    await ui.yukle(ornekCsv);
+    const yukleme = ui.yukle(metin);
+    assert.equal(ui.raporIndir.disabled, true);
+    await yukleme;
+    assert.equal(ui.raporIndir.disabled, true);
+    ui.indir();
+  }
+  assert.equal(ui.indirmeler.length, 0);
 });
 
 test('pano: ardışık dosyalar birleşmez; ret ve seçim iptali eski panoyu temizler', async () => {

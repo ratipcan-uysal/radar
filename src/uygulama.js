@@ -1,11 +1,30 @@
 import { analizEtAlintili } from './analiz.js';
 import { sozlukHazirla } from './sozluk.js';
 import { panoCiz } from './pano.js';
+import { raporMetni, dosyaAdi } from './rapor.js';
 
 const dosyaGirdisi = document.getElementById('dosya');
 const durum = document.getElementById('durum');
 const pano = document.getElementById('pano');
+const raporIndir = document.getElementById('rapor-indir');
+let raporSonucu = null;
 let secim = 0;
+
+raporIndir.addEventListener('click', () => {
+  if (!raporSonucu) return;
+  const blob = new Blob([raporMetni(raporSonucu)], { type: 'text/markdown;charset=utf-8' });
+  const adres = URL.createObjectURL(blob);
+  const baglanti = document.createElement('a');
+  baglanti.href = adres;
+  baglanti.download = dosyaAdi(raporSonucu);
+  document.body.append(baglanti);
+  try {
+    baglanti.click();
+  } finally {
+    baglanti.remove();
+    setTimeout(() => URL.revokeObjectURL(adres), 0);
+  }
+});
 
 // Sözlük açılışta bir kez yüklenir; eksik ya da bozuksa hata dosya seçilince gösterilir.
 const sozlukSozu = fetch('data/temalar.json')
@@ -20,6 +39,8 @@ const sozlukSozu = fetch('data/temalar.json')
 dosyaGirdisi.addEventListener('change', async () => {
   const buSecim = ++secim;
   const dosya = dosyaGirdisi.files[0];
+  raporSonucu = null;
+  raporIndir.disabled = true;
   pano.textContent = '';
   if (!dosya) {
     durum.textContent = 'Dosya seçin.';
@@ -40,6 +61,10 @@ dosyaGirdisi.addEventListener('change', async () => {
     }
     const sonuc = analizEtAlintili(metin, sozluk, bugun);
     panoCiz(pano, sonuc, document);
+    if (sonuc.durum === 'tamam') {
+      raporSonucu = sonuc;
+      raporIndir.disabled = false;
+    }
     durum.textContent = sonuc.durum === 'red' ? sonuc.redNedeni
       : sonuc.durum === 'bos' ? 'Kullanılabilir satır yok' : 'Dosya okundu.';
   } catch {
