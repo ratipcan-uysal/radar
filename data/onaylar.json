@@ -1,0 +1,17 @@
+{
+  "aciklama": "Onaylı dosyaların özeti. Dosya değişirse tests/koruma.test.js düşer. Yeni özeti yalnız onaylayan kişi yazar.",
+  "dosyalar": {
+    "data/temalar.json": {
+      "sha256": "f9f728e7e2ecfe2a28df447b3f594eb26d2fc8e96a07d2eca70deef238102307",
+      "karar": "K52",
+      "onaylayan": "Deniz",
+      "tarih": "2026-10-13"
+    },
+    "tests/beklenen/ornek-sonuc.json": {
+      "sha256": "3d25aa06de3df9d4c61287a2e78bd9bfa49050d8585058576be875b40085c3ad",
+      "karar": "K51",
+      "onaylayan": "Deniz",
+      "tarih": "2026-10-13"
+    }
+  }
+}

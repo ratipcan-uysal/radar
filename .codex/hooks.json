@@ -1,0 +1,30 @@
+{
+  "description": "Radar: korunan dosyalar ve değişiklik sonrası test",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/araclar/hooks/koruma.mjs\"",
+            "statusMessage": "Korunan dosya kontrolü"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/araclar/hooks/degisiklik-sonrasi.mjs\"",
+            "timeout": 120,
+            "statusMessage": "Testler"
+          }
+        ]
+      }
+    ]
+  }
+}
