@@ -7,20 +7,22 @@
   <link rel="stylesheet" href="radar.css">
 </head>
 <body>
-  <header>
+  <header class="ust">
     <h1>Radar</h1>
   </header>
   <main>
-    <section class="yukleme">
-      <label for="dosya">Geri bildirim CSV dosyası</label>
-      <input type="file" id="dosya" accept=".csv,text/csv">
-      <p id="durum" role="status">Dosya seçin.</p>
-    </section>
+    <div class="arac-cubugu">
+      <section class="yukleme">
+        <label for="dosya">Geri bildirim CSV dosyası</label>
+        <input type="file" id="dosya" accept=".csv,text/csv">
+        <p id="durum" role="status">Dosya seçin.</p>
+      </section>
+      <section class="rapor">
+        <button type="button" id="rapor-indir" disabled>Raporu indir</button>
+        <span class="uyari" id="rapor-uyari">Alıntılarda isim ya da başka kişisel bilgi olabilir. Göndermeden önce okuyun.</span>
+      </section>
+    </div>
     <section id="pano" aria-label="Pano"></section>
-    <section class="rapor">
-      <button type="button" id="rapor-indir" disabled>Raporu indir</button>
-      <span class="uyari" id="rapor-uyari">Alıntılarda isim ya da başka kişisel bilgi olabilir. Göndermeden önce okuyun.</span>
-    </section>
   </main>
   <script type="module" src="src/uygulama.js"></script>
 </body>

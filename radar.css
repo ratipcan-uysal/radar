@@ -1,33 +1,349 @@
+/* Renkler: metin/zemin oranları en az 7:1, çubuk dolgusu/izi en az 3:1 (WCAG 1.4.3, 1.4.11). */
+:root {
+  color-scheme: light dark;
+  --zemin: #f4f6f9;
+  --yuzey: #ffffff;
+  --metin: #16191f;
+  --soluk: #4a5260;
+  --cizgi: #d5dae2;
+  --vurgu: #2848b8;
+  --vurgu-uzeri: #ffffff;
+  --iz: #e2e6ee;
+  --uyari-zemin: #fff6e0;
+  --uyari-cizgi: #b7791f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #0f1216;
+    --yuzey: #181c22;
+    --metin: #e9ecf1;
+    --soluk: #a9b1bd;
+    --cizgi: #2c333d;
+    --vurgu: #8fb0ff;
+    --vurgu-uzeri: #0f1216;
+    --iz: #2a3039;
+    --uyari-zemin: #2a2210;
+    --uyari-cizgi: #d69e2e;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: system-ui, sans-serif;
-  margin: 0 auto;
-  max-width: 60rem;
-  padding: 1rem;
+  margin: 0;
+  background: var(--zemin);
+  color: var(--metin);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.ust,
+main {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.ust {
+  padding-block: 1.25rem 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--vurgu);
+  outline-offset: 2px;
+}
+
+/* Üst alan: dosya seçimi ve rapor */
+
+.arac-cubugu {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--yuzey);
+  border: 1px solid var(--cizgi);
+  border-radius: 12px;
+}
+
+@media (min-width: 48rem) {
+  .arac-cubugu {
+    grid-template-columns: 1fr minmax(0, 22rem);
+    align-items: start;
+  }
 }
 
 .yukleme label {
   display: block;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
+}
+
+input[type="file"] {
+  max-width: 100%;
+  font: inherit;
+  color: var(--metin);
+  border-radius: 8px;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 0.75rem;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--vurgu);
+  background: var(--yuzey);
+  border: 1px solid var(--vurgu);
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 #durum {
-  margin: 0.5rem 0;
-}
-
-#pano {
-  min-height: 4rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--soluk);
 }
 
 .rapor {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+#rapor-indir {
+  padding: 0.55rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--vurgu-uzeri);
+  background: var(--vurgu);
+  border: 1px solid var(--vurgu);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#rapor-indir:disabled {
+  color: var(--soluk);
+  background: transparent;
+  border-color: var(--cizgi);
+  cursor: not-allowed;
 }
 
 .uyari {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  background: var(--uyari-zemin);
+  border-left: 3px solid var(--uyari-cizgi);
+  border-radius: 4px;
+}
+
+/* Pano. DOM sırası testlerle sabit; kapsam görselde en üste alınır. */
+
+#pano {
+  display: grid;
+  gap: 0.75rem;
+  margin-block: 1.25rem 2rem;
+}
+
+#pano:empty {
+  display: none;
+}
+
+#pano p {
+  margin: 0;
+}
+
+.kapsam {
+  order: -1;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.atlanan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--soluk);
+  border: 1px solid var(--cizgi);
+  border-radius: 8px;
+}
+
+.tema {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--yuzey);
+  border: 1px solid var(--cizgi);
+  border-radius: 12px;
+}
+
+.tema-baslik {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+.sira {
+  flex: none;
+  color: var(--soluk);
+}
+
+#pano .olcu {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.puan {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.puan-etiket {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--soluk);
+}
+
+.puan-deger {
+  min-width: 5.5ch;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cubuk {
+  display: block;
+  height: 0.75rem;
+  overflow: hidden;
+  background: var(--iz);
+  border-radius: 999px;
+}
+
+.cubuk-dolgu {
+  display: block;
+  height: 100%;
+  background: var(--vurgu);
+  border-radius: inherit;
+}
+
+.alt-olcu {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.25rem;
   font-size: 0.9rem;
+  color: var(--soluk);
+}
+
+/* Görselde gizli, ekran okuyucuda okunur. */
+.ayrac {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.alintilar {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--cizgi);
+}
+
+.alintilar summary {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.2rem 0.3rem;
+  margin-left: -0.3rem;
+  font-weight: 600;
+  color: var(--vurgu);
+  list-style: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.alintilar summary::-webkit-details-marker {
+  display: none;
+}
+
+.alintilar summary::before {
+  content: "";
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.alintilar[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.alintilar ul {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.alinti {
+  padding: 0.15rem 0 0.15rem 0.75rem;
+  border-left: 3px solid var(--cizgi);
+}
+
+.alinti-kunye {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--soluk);
+}
+
+.alinti-metin {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.ovgu-diger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--soluk);
+  border: 1px dashed var(--cizgi);
+  border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alintilar summary::before {
+    transition: none;
+  }
+}
+
+/* Yüksek karşıtlık modunda arka plan renkleri silinir; çubuk görünür kalsın. */
+@media (forced-colors: active) {
+  .cubuk {
+    border: 1px solid CanvasText;
+  }
+
+  .cubuk-dolgu {
+    background: CanvasText;
+  }
 }
