@@ -49,3 +49,17 @@ Kriterlerin ikinci turunda çıkan E14-E22 için kısa toplantı. Deniz: "Bundan
 | K27 | Diğer telefon biçimleri (E19) | Tire, parantez ve boşlukla yazılmış Türkiye numaraları (`0532-555-12-34`, `(0532) 555 12 34`, `532 555 12 34`) da maskelenir. Yurt dışı numaralar sürüm 2'de. | Mert |
 | K28 | Rapor adı (E20) | Dosya adındaki tarih, dosyadaki en yeni tarihtir. Rapor `# Radar raporu: <tarih>` ile başlar, her tema `##` başlığıdır. | Deniz |
 | K29 | Ölçüm (E21-E22) | Performans ekibin standart dizüstünde, dosya seçildiği andan pano görünene kadar ölçülür. K17 yalnız teslim edilen koda uygulanır; testler Node'un yerleşik test aracıyla yazılır. | Deniz, Mert |
+
+# Ek kararlar: 10 Ekim (PRD'ye ikinci göz)
+
+PRD iki ayrı modele eleştirtildi (`docs/karsilastirma/05-*-elestiri.md`). İkisinin de bulduğu üç sorun ve diğer itirazlar Deniz, Mert ve Ece ile karara bağlandı.
+
+| # | Soru | Karar | Kim verdi |
+|---|---|---|---|
+| K30 | K20 ile K21 çelişiyor | K21 geçerlidir. "İptal ücreti" teması ücret, kesinti, ceza ya da para geçen iptal kayıtlarını ve iptal süresi ya da politikası sorularını kapsar. Bildirim yüzünden olan iptal bildirim temasına girer. Kabul kriterlerindeki beklenen sayılar onaylı sözlükle yeniden hesaplanır. | Deniz |
+| K31 | İleri tarihli satır | Bugünün tarihinden sonraki tarihler bozuk satır sayılır ve "ileri tarih" nedeniyle atlanır. Pencere, geçerli satırların en yeni tarihinden hesaplanır. | Deniz, Ece |
+| K32 | Tema ayrıntısı | Temalar kullanıcının derdi düzeyindedir (ör. "ödeme hatası" tek temadır). Alt kırılım sürüm 2'de. Sözlük bu düzeyde onaylanır. | Deniz |
+| K33 | İsim ve yönetim raporu | "Raporu indir" düğmesinin yanında uyarı yazar: "Alıntılarda isim ya da başka kişisel bilgi olabilir. Göndermeden önce okuyun." | Mert, Deniz |
+| K34 | Kayıt mı kişi mi | Radar kayıt sayar. Pano ve raporda "kişi" değil "kayıt" yazar. Aynı `id` farklı içerikle iki kez gelirse ikisi de atlanır, neden "çelişkili id" olarak yazılır. | Deniz, Ece |
+| K35 | Örneklem ve kanal dağılımı | Raporun ilk satırı kapsamı söyler: tarih aralığı, kayıt sayısı ve kanal dağılımı. Yönetim sunumunda "örnek dosyaya göre" ifadesi kullanılır. | Deniz |
+| K36 | Puan ile metin uyuşmazlığı | Sürüm 1'de puan esas alınır. Uyuşmazlık sürüm 2'de ele alınacak. | Deniz |
