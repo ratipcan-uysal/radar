@@ -1,7 +1,5 @@
 # Radar: kabul kriterleri (K1–K36 ile güncellendi)
 
-> **11 Ekim notu (Deniz):** K37-K46 kapsamı dondurdu. Bu belgeyle çelişen bir yer kalırsa `docs/kararlar.md` geçerlidir. Örnek dosyanın beklenen sayıları `tests/` içindeki betikle hesaplanır (K38).
-
 **Kaynaklar:** `docs/kararlar.md` içindeki K1–K36 ve Deniz’in ek notu; `docs/notlar/toplanti-notu.md`, `docs/notlar/slack-dokumu.md` ve `data/ornek-geri-bildirim.csv`.
 
 **Hedef:** 16 Ekim Cuma demosu (K7). Aşağıdaki kriterlerin tamamı geçtiğinde iş “bitti” sayılır. Sözlüğe bağlı kriterler, Deniz’in sözlük onayı ve beklenen sonuçların hesaplanması tamamlanmadan geçmiş sayılmaz.
