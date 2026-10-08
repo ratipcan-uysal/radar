@@ -21,3 +21,7 @@ npm test
 ```
 
 Node 18 ve üstü gerekir. Bağımlılık kurmak gerekmez.
+
+## Yayın
+
+`main`'e push edilince `.github/workflows/yayin.yml` önce `npm test`'i koşar; geçerse yalnız sitenin dosyalarını (index.html, radar.css, src/, data/temalar.json, örnek CSV) GitHub Pages'e yayınlar. Depo ayarlarında **Settings › Pages › Source: GitHub Actions** seçilmelidir.

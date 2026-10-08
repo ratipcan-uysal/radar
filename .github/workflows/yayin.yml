@@ -1,0 +1,48 @@
+# Radar'ı GitHub Pages'te yayınlar. Testler geçmezse yayın olmaz.
+# Yalnız sitenin dosyaları yayınlanır: docs/, tests/, evals/ ve ajan dosyaları yayına girmez.
+name: Yayın
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+
+  yayin:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dagit.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site klasörünü hazırla
+        run: |
+          mkdir -p _site/data
+          cp index.html radar.css _site/
+          cp -r src _site/
+          cp data/temalar.json data/ornek-geri-bildirim.csv _site/data/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: dagit
+        uses: actions/deploy-pages@v4
