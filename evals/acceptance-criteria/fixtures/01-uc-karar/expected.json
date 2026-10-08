@@ -1,0 +1,16 @@
+{
+  "aciklama": "Üç net karar: her biri kaynağıyla en az bir kritere dönmeli; sınır durumları (30. dakika, 4. istek, 9 karakter) yazılmalı; belirsiz kelime kullanılmamalı.",
+  "marker": [
+    { "id": "kimlik", "aciklama": "KK-01 biçiminde kimlik", "desen": "kk-01" },
+    { "id": "k1", "aciklama": "K1'e bağlı kriter", "desen": "\\bk1\\b" },
+    { "id": "k2", "aciklama": "K2'ye bağlı kriter", "desen": "\\bk2\\b" },
+    { "id": "k3", "aciklama": "K3'e bağlı kriter", "desen": "\\bk3\\b" },
+    { "id": "sinir-sure", "aciklama": "Bağlantı süresinin sınırı (30 dakika) ölçülebilir", "desen": "30 dakika" },
+    { "id": "sinir-istek", "aciklama": "Dördüncü istek ya da sınırın aşılması", "desen": "(4\\.|dorduncu|4 istek|ucten fazla|3'ten fazla|fazla deneme)" },
+    { "id": "sinir-uzunluk", "aciklama": "10 karakterden kısa şifre", "desen": "(9 karakter|10 karakterden (kisa|az))" },
+    { "id": "yapi", "aciklama": "Ön koşul, eylem, beklenen alanları", "desen": "(on kosul[\\s\\S]*eylem[\\s\\S]*beklenen)" }
+  ],
+  "negatif": [
+    { "id": "belirsiz", "aciklama": "Ölçülemez kelime", "desen": "(hizlica|kolayca|kullanici dostu|sorunsuz(ca)?)" }
+  ]
+}

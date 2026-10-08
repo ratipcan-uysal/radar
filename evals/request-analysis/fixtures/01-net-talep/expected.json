@@ -1,0 +1,32 @@
+{
+  "aciklama": "Basit not: iki açık nokta (izin reddi, iptalde etkinlik) ve bir kapsam ayrımı (hatırlatma) bulunmalı.",
+  "marker": [
+    {
+      "id": "izin",
+      "aciklama": "Takvim izni verilmezse ne olacağı açık nokta olarak çıkmalı",
+      "desen": "(izin|izni)"
+    },
+    {
+      "id": "iptal-etkinlik",
+      "aciklama": "İptalde takvim etkinliğinin silinmesi açık nokta olarak çıkmalı",
+      "desen": "iptal"
+    },
+    {
+      "id": "kaynak",
+      "aciklama": "Maddelerde kişi adıyla kaynak gösterilmeli",
+      "desen": "burak"
+    },
+    {
+      "id": "soru-bolumu",
+      "aciklama": "Sorulacak sorular bölümü olmalı",
+      "desen": "sorulacak soru"
+    }
+  ],
+  "negatif": [
+    {
+      "id": "cozum-onerisi",
+      "aciklama": "Çözüm önermemeli: 'öneririm' ya da 'X yapılmalı.' gibi hüküm cümlesi (soru biçimi serbest)",
+      "desen": "(onerim|onerilir|oneriyorum|(yapilmali|eklenmeli|gosterilmeli|silinmeli)(dir)?\\.)"
+    }
+  ]
+}

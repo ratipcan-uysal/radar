@@ -1,0 +1,14 @@
+{
+  "aciklama": "Kullanıcıya görünenler (indirim kodu, adet hatası, kart son 4 hane, koyu tema) gruplara; iç değişiklikler (refactor, test, CI) ayrı. Dosya adı kullanıcı maddelerinde geçmemeli.",
+  "marker": [
+    { "id": "yeni", "aciklama": "Yeni grubu", "desen": "yeni" },
+    { "id": "duzeltildi", "aciklama": "Düzeltildi grubu", "desen": "duzeltildi" },
+    { "id": "ic", "aciklama": "İç değişiklikler grubu", "desen": "ic degisiklik" },
+    { "id": "indirim", "aciklama": "İndirim kodu maddesi", "desen": "indirim kod" },
+    { "id": "adet", "aciklama": "Adet hatası maddesi", "desen": "adet" },
+    { "id": "commit-kimligi", "aciklama": "Maddede commit kimliği", "desen": "(a1b2c3d|b2c3d4e|e5f6a7b|a7b8c9d)" }
+  ],
+  "negatif": [
+    { "id": "dosya-adi", "aciklama": "Kullanıcı maddelerinde kaynak dosya adı", "desen": "src/sepet/kod\\.js" }
+  ]
+}

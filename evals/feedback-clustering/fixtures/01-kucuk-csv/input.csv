@@ -1,0 +1,18 @@
+id,tarih,kanal,metin,puan,segment
+KR-01,2026-09-01,magaza,Kurye paketi kapıya bırakıp gitti zil bile çalmadı,1,yeni
+KR-02,2026-09-02,destek,"Paket geldi ama kapı önünde bırakılmış, ıslanmış",2,duzenli
+KR-03,2026-09-03,anket,kurye kapiyi calmadan birakti,2,duzenli
+KR-04,2026-09-04,magaza,The courier left the parcel outside without ringing,1,yeni
+KR-05,2026-09-05,destek,Teslimat saati 14-16 dendi akşam 9'da geldi,1,duzenli
+KR-06,2026-09-06,magaza,"Söylenen saatte gelmedi, 5 saat geç geldi",1,kurumsal
+KR-07,2026-09-07,anket,teslimat hep gec kaliyor,2,yeni
+KR-08,2026-09-08,magaza,Delivery was 4 hours late,2,yeni
+KR-09,2026-09-09,destek,Kargo takip ekranı günlerdir aynı yerde gösteriyor,2,duzenli
+KR-10,2026-09-10,magaza,Takip numarası çalışmıyor,1,yeni
+KR-11,2026-09-11,anket,"Paket nerede bilmiyorum, takip sayfası güncellenmiyor",2,duzenli
+KR-12,2026-09-12,magaza,Tracking page shows nothing,1,yeni
+KR-13,2026-09-13,anket,Kurye çok kibardı teşekkürler,5,duzenli
+KR-14,2026-09-14,magaza,Hızlı ve sorunsuz teslimat,5,yeni
+KR-15,2026-09-15,anket,Paketleme çok özenliydi,5,kurumsal
+KR-16,2026-09-16,magaza,Great service,5,yeni
+KR-17,2026-09-17,destek,"Kapıya bırakılan paket çalındı, takip ekranı hâlâ yolda diyor",1,duzenli

@@ -1,0 +1,12 @@
+{
+  "aciklama": "İki açık çelişki (sıklık, biçim) çelişki bölümünde, iki tarafın adıyla görünmeli.",
+  "marker": [
+    { "id": "siklik", "aciklama": "Haftalık ile günlük çelişkisi", "desen": "(haftalik[\\s\\S]{0,200}gunluk|gunluk[\\s\\S]{0,200}haftalik)" },
+    { "id": "bicim", "aciklama": "PDF ile Excel çelişkisi", "desen": "(pdf[\\s\\S]{0,200}excel|excel[\\s\\S]{0,200}pdf)" },
+    { "id": "celiski-bolumu", "aciklama": "Çelişkiler bölümü olmalı", "desen": "celiski" },
+    { "id": "iki-taraf", "aciklama": "İki kişinin adı geçmeli", "desen": "(gizem[\\s\\S]*okan|okan[\\s\\S]*gizem)" }
+  ],
+  "negatif": [
+    { "id": "karar-uydurma", "aciklama": "Bir tarafı seçip karar gibi yazmamalı", "desen": "(karar(a baglandi| verildi)|rapor (haftalik|gunluk) olacak)" }
+  ]
+}

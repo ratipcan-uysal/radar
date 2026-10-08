@@ -1,0 +1,728 @@
+[
+  {
+    "arac": "claude",
+    "skill": "acceptance-criteria",
+    "fixture": "01-uc-karar",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "kimlik",
+        "tur": "marker",
+        "aciklama": "KK-01 biçiminde kimlik",
+        "tuttu": true
+      },
+      {
+        "id": "k1",
+        "tur": "marker",
+        "aciklama": "K1'e bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "k2",
+        "tur": "marker",
+        "aciklama": "K2'ye bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "k3",
+        "tur": "marker",
+        "aciklama": "K3'e bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-sure",
+        "tur": "marker",
+        "aciklama": "Bağlantı süresinin sınırı (30 dakika) ölçülebilir",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-istek",
+        "tur": "marker",
+        "aciklama": "Dördüncü istek ya da sınırın aşılması",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-uzunluk",
+        "tur": "marker",
+        "aciklama": "10 karakterden kısa şifre",
+        "tuttu": true
+      },
+      {
+        "id": "yapi",
+        "tur": "marker",
+        "aciklama": "Ön koşul, eylem, beklenen alanları",
+        "tuttu": true
+      },
+      {
+        "id": "belirsiz",
+        "tur": "negatif",
+        "aciklama": "Ölçülemez kelime",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "acceptance-criteria",
+    "fixture": "02-eksik-karar",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "eksik-bolumu",
+        "tur": "marker",
+        "aciklama": "Kararı eksik bölümü",
+        "tuttu": true
+      },
+      {
+        "id": "suresi-gecmis",
+        "tur": "marker",
+        "aciklama": "Süresi geçmiş kod eksik karar olarak",
+        "tuttu": true
+      },
+      {
+        "id": "birden-cok",
+        "tur": "marker",
+        "aciklama": "Birden çok kod eksik karar olarak",
+        "tuttu": true
+      },
+      {
+        "id": "kime",
+        "tur": "marker",
+        "aciklama": "Kime sorulacağı",
+        "tuttu": true
+      },
+      {
+        "id": "uydurma-kriter",
+        "tur": "negatif",
+        "aciklama": "Süresi geçmiş kod için kesin beklenen davranış uydurmamalı (ör. 'kod reddedilir' bir Beklenen satırında)",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "feedback-clustering",
+    "fixture": "01-kucuk-csv",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "json",
+        "tur": "marker",
+        "aciklama": "Çıktıda ayrıştırılabilir JSON sözlük",
+        "tuttu": true
+      },
+      {
+        "id": "kapiya-birakma",
+        "tur": "marker",
+        "aciklama": "KR-01, KR-02, KR-03, KR-04, KR-17 aynı temada",
+        "tuttu": true,
+        "not": "Paket kapıya bırakıldı, zil çalınmadı"
+      },
+      {
+        "id": "gec-teslimat",
+        "tur": "marker",
+        "aciklama": "KR-05, KR-06, KR-07, KR-08 aynı temada",
+        "tuttu": true,
+        "not": "Teslimat geç geldi"
+      },
+      {
+        "id": "takip",
+        "tur": "marker",
+        "aciklama": "KR-09, KR-10, KR-11, KR-12, KR-17 aynı temada",
+        "tuttu": true,
+        "not": "Takip ekranı çalışmıyor"
+      },
+      {
+        "id": "ovgu",
+        "tur": "marker",
+        "aciklama": "Övgü kayıtları övgüde",
+        "tuttu": true
+      },
+      {
+        "id": "ovgu-sikayette",
+        "tur": "negatif",
+        "aciklama": "Övgü kaydı bir şikâyet temasına girmiş",
+        "tuttu": false,
+        "not": ""
+      },
+      {
+        "id": "diger",
+        "tur": "negatif",
+        "aciklama": "Hiçbir yere girmeyen kayıt kalmış",
+        "tuttu": false,
+        "not": ""
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "prd-writer",
+    "fixture": "01-hedefsiz",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "bilinmiyor",
+        "tur": "marker",
+        "aciklama": "Eksik bölüm için Bilinmiyor",
+        "tuttu": true
+      },
+      {
+        "id": "k1-kaynak",
+        "tur": "marker",
+        "aciklama": "K1 kaynağı",
+        "tuttu": true
+      },
+      {
+        "id": "kapsam-disi",
+        "tur": "marker",
+        "aciklama": "Kapsam dışı bölümü (çevrimdışı rezervasyon)",
+        "tuttu": true
+      },
+      {
+        "id": "yedi-gun",
+        "tur": "marker",
+        "aciklama": "7 gün saklama notu (Kaan)",
+        "tuttu": true
+      },
+      {
+        "id": "yuzde-hedef",
+        "tur": "negatif",
+        "aciklama": "Uydurma yüzde hedef",
+        "tuttu": false
+      },
+      {
+        "id": "tarih-uydurma",
+        "tur": "negatif",
+        "aciklama": "Uydurma teslim tarihi",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "release-notes",
+    "fixture": "01-git-log",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "yeni",
+        "tur": "marker",
+        "aciklama": "Yeni grubu",
+        "tuttu": true
+      },
+      {
+        "id": "duzeltildi",
+        "tur": "marker",
+        "aciklama": "Düzeltildi grubu",
+        "tuttu": true
+      },
+      {
+        "id": "ic",
+        "tur": "marker",
+        "aciklama": "İç değişiklikler grubu",
+        "tuttu": true
+      },
+      {
+        "id": "indirim",
+        "tur": "marker",
+        "aciklama": "İndirim kodu maddesi",
+        "tuttu": true
+      },
+      {
+        "id": "adet",
+        "tur": "marker",
+        "aciklama": "Adet hatası maddesi",
+        "tuttu": true
+      },
+      {
+        "id": "commit-kimligi",
+        "tur": "marker",
+        "aciklama": "Maddede commit kimliği",
+        "tuttu": true
+      },
+      {
+        "id": "dosya-adi",
+        "tur": "negatif",
+        "aciklama": "Kullanıcı maddelerinde kaynak dosya adı",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "01-net-talep",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "izin",
+        "tur": "marker",
+        "aciklama": "Takvim izni verilmezse ne olacağı açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iptal-etkinlik",
+        "tur": "marker",
+        "aciklama": "İptalde takvim etkinliğinin silinmesi açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "kaynak",
+        "tur": "marker",
+        "aciklama": "Maddelerde kişi adıyla kaynak gösterilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "soru-bolumu",
+        "tur": "marker",
+        "aciklama": "Sorulacak sorular bölümü olmalı",
+        "tuttu": true
+      },
+      {
+        "id": "cozum-onerisi",
+        "tur": "negatif",
+        "aciklama": "Çözüm önermemeli: 'öneririm' ya da 'X yapılmalı.' gibi hüküm cümlesi (soru biçimi serbest)",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "02-celiski",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "siklik",
+        "tur": "marker",
+        "aciklama": "Haftalık ile günlük çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "bicim",
+        "tur": "marker",
+        "aciklama": "PDF ile Excel çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "celiski-bolumu",
+        "tur": "marker",
+        "aciklama": "Çelişkiler bölümü olmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iki-taraf",
+        "tur": "marker",
+        "aciklama": "İki kişinin adı geçmeli",
+        "tuttu": true
+      },
+      {
+        "id": "karar-uydurma",
+        "tur": "negatif",
+        "aciklama": "Bir tarafı seçip karar gibi yazmamalı",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "03-tuzak",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "kaynaksiz-rakip",
+        "tur": "marker",
+        "aciklama": "Rakip iddiasının verisiz olduğu belirtilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "baska-ekip",
+        "tur": "marker",
+        "aciklama": "Değişikliğin başka ekibe bağımlılığı çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "tarih-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan tarih yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "yuzde-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan yüzde ya da oran yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "rakip-adi",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan rakip adı yazmamalı",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "acceptance-criteria",
+    "fixture": "01-uc-karar",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "kimlik",
+        "tur": "marker",
+        "aciklama": "KK-01 biçiminde kimlik",
+        "tuttu": true
+      },
+      {
+        "id": "k1",
+        "tur": "marker",
+        "aciklama": "K1'e bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "k2",
+        "tur": "marker",
+        "aciklama": "K2'ye bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "k3",
+        "tur": "marker",
+        "aciklama": "K3'e bağlı kriter",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-sure",
+        "tur": "marker",
+        "aciklama": "Bağlantı süresinin sınırı (30 dakika) ölçülebilir",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-istek",
+        "tur": "marker",
+        "aciklama": "Dördüncü istek ya da sınırın aşılması",
+        "tuttu": true
+      },
+      {
+        "id": "sinir-uzunluk",
+        "tur": "marker",
+        "aciklama": "10 karakterden kısa şifre",
+        "tuttu": true
+      },
+      {
+        "id": "yapi",
+        "tur": "marker",
+        "aciklama": "Ön koşul, eylem, beklenen alanları",
+        "tuttu": true
+      },
+      {
+        "id": "belirsiz",
+        "tur": "negatif",
+        "aciklama": "Ölçülemez kelime",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "acceptance-criteria",
+    "fixture": "02-eksik-karar",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "eksik-bolumu",
+        "tur": "marker",
+        "aciklama": "Kararı eksik bölümü",
+        "tuttu": true
+      },
+      {
+        "id": "suresi-gecmis",
+        "tur": "marker",
+        "aciklama": "Süresi geçmiş kod eksik karar olarak",
+        "tuttu": true
+      },
+      {
+        "id": "birden-cok",
+        "tur": "marker",
+        "aciklama": "Birden çok kod eksik karar olarak",
+        "tuttu": true
+      },
+      {
+        "id": "kime",
+        "tur": "marker",
+        "aciklama": "Kime sorulacağı",
+        "tuttu": true
+      },
+      {
+        "id": "uydurma-kriter",
+        "tur": "negatif",
+        "aciklama": "Süresi geçmiş kod için kesin beklenen davranış uydurmamalı (ör. 'kod reddedilir' bir Beklenen satırında)",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "feedback-clustering",
+    "fixture": "01-kucuk-csv",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "json",
+        "tur": "marker",
+        "aciklama": "Çıktıda ayrıştırılabilir JSON sözlük",
+        "tuttu": true
+      },
+      {
+        "id": "kapiya-birakma",
+        "tur": "marker",
+        "aciklama": "KR-01, KR-02, KR-03, KR-04, KR-17 aynı temada",
+        "tuttu": true,
+        "not": "Haber verilmeden kapıya bırakılan paket"
+      },
+      {
+        "id": "gec-teslimat",
+        "tur": "marker",
+        "aciklama": "KR-05, KR-06, KR-07, KR-08 aynı temada",
+        "tuttu": true,
+        "not": "Geciken teslimat"
+      },
+      {
+        "id": "takip",
+        "tur": "marker",
+        "aciklama": "KR-09, KR-10, KR-11, KR-12, KR-17 aynı temada",
+        "tuttu": true,
+        "not": "Kargonun durumunu takip edememe"
+      },
+      {
+        "id": "ovgu",
+        "tur": "marker",
+        "aciklama": "Övgü kayıtları övgüde",
+        "tuttu": true
+      },
+      {
+        "id": "ovgu-sikayette",
+        "tur": "negatif",
+        "aciklama": "Övgü kaydı bir şikâyet temasına girmiş",
+        "tuttu": false,
+        "not": ""
+      },
+      {
+        "id": "diger",
+        "tur": "negatif",
+        "aciklama": "Hiçbir yere girmeyen kayıt kalmış",
+        "tuttu": false,
+        "not": ""
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "prd-writer",
+    "fixture": "01-hedefsiz",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "bilinmiyor",
+        "tur": "marker",
+        "aciklama": "Eksik bölüm için Bilinmiyor",
+        "tuttu": true
+      },
+      {
+        "id": "k1-kaynak",
+        "tur": "marker",
+        "aciklama": "K1 kaynağı",
+        "tuttu": true
+      },
+      {
+        "id": "kapsam-disi",
+        "tur": "marker",
+        "aciklama": "Kapsam dışı bölümü (çevrimdışı rezervasyon)",
+        "tuttu": true
+      },
+      {
+        "id": "yedi-gun",
+        "tur": "marker",
+        "aciklama": "7 gün saklama notu (Kaan)",
+        "tuttu": true
+      },
+      {
+        "id": "yuzde-hedef",
+        "tur": "negatif",
+        "aciklama": "Uydurma yüzde hedef",
+        "tuttu": false
+      },
+      {
+        "id": "tarih-uydurma",
+        "tur": "negatif",
+        "aciklama": "Uydurma teslim tarihi",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "release-notes",
+    "fixture": "01-git-log",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "yeni",
+        "tur": "marker",
+        "aciklama": "Yeni grubu",
+        "tuttu": true
+      },
+      {
+        "id": "duzeltildi",
+        "tur": "marker",
+        "aciklama": "Düzeltildi grubu",
+        "tuttu": true
+      },
+      {
+        "id": "ic",
+        "tur": "marker",
+        "aciklama": "İç değişiklikler grubu",
+        "tuttu": true
+      },
+      {
+        "id": "indirim",
+        "tur": "marker",
+        "aciklama": "İndirim kodu maddesi",
+        "tuttu": true
+      },
+      {
+        "id": "adet",
+        "tur": "marker",
+        "aciklama": "Adet hatası maddesi",
+        "tuttu": true
+      },
+      {
+        "id": "commit-kimligi",
+        "tur": "marker",
+        "aciklama": "Maddede commit kimliği",
+        "tuttu": true
+      },
+      {
+        "id": "dosya-adi",
+        "tur": "negatif",
+        "aciklama": "Kullanıcı maddelerinde kaynak dosya adı",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "request-analysis",
+    "fixture": "01-net-talep",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "izin",
+        "tur": "marker",
+        "aciklama": "Takvim izni verilmezse ne olacağı açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iptal-etkinlik",
+        "tur": "marker",
+        "aciklama": "İptalde takvim etkinliğinin silinmesi açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "kaynak",
+        "tur": "marker",
+        "aciklama": "Maddelerde kişi adıyla kaynak gösterilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "soru-bolumu",
+        "tur": "marker",
+        "aciklama": "Sorulacak sorular bölümü olmalı",
+        "tuttu": true
+      },
+      {
+        "id": "cozum-onerisi",
+        "tur": "negatif",
+        "aciklama": "Çözüm önermemeli: 'öneririm' ya da 'X yapılmalı.' gibi hüküm cümlesi (soru biçimi serbest)",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "request-analysis",
+    "fixture": "02-celiski",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "siklik",
+        "tur": "marker",
+        "aciklama": "Haftalık ile günlük çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "bicim",
+        "tur": "marker",
+        "aciklama": "PDF ile Excel çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "celiski-bolumu",
+        "tur": "marker",
+        "aciklama": "Çelişkiler bölümü olmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iki-taraf",
+        "tur": "marker",
+        "aciklama": "İki kişinin adı geçmeli",
+        "tuttu": true
+      },
+      {
+        "id": "karar-uydurma",
+        "tur": "negatif",
+        "aciklama": "Bir tarafı seçip karar gibi yazmamalı",
+        "tuttu": false
+      }
+    ]
+  },
+  {
+    "arac": "codex",
+    "skill": "request-analysis",
+    "fixture": "03-tuzak",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "kaynaksiz-rakip",
+        "tur": "marker",
+        "aciklama": "Rakip iddiasının verisiz olduğu belirtilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "baska-ekip",
+        "tur": "marker",
+        "aciklama": "Değişikliğin başka ekibe bağımlılığı çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "tarih-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan tarih yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "yuzde-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan yüzde ya da oran yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "rakip-adi",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan rakip adı yazmamalı",
+        "tuttu": false
+      }
+    ]
+  }
+]

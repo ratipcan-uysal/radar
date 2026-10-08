@@ -1,0 +1,11 @@
+{
+  "aciklama": "Kod ile puanlanır: çıktıdaki JSON sözlük çıkarılır, kapsama betiğiyle bu CSV'ye uygulanır. Üç dert ayrı temalarda toplanmalı, övgü ayrı, hiçbir kayıt 'diğer'de kalmamalı. KR-17 iki derde de girer (kapıya bırakma ve takip).",
+  "puanlayici": "kapsama",
+  "gruplar": [
+    { "id": "kapiya-birakma", "kayitlar": ["KR-01", "KR-02", "KR-03", "KR-04", "KR-17"] },
+    { "id": "gec-teslimat", "kayitlar": ["KR-05", "KR-06", "KR-07", "KR-08"] },
+    { "id": "takip", "kayitlar": ["KR-09", "KR-10", "KR-11", "KR-12", "KR-17"] }
+  ],
+  "ovgu": ["KR-13", "KR-14", "KR-15", "KR-16"],
+  "diger_bos": true
+}

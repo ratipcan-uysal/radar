@@ -1,0 +1,119 @@
+[
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "01-net-talep",
+    "hukum": "FAIL",
+    "sonuclar": [
+      {
+        "id": "izin",
+        "tur": "marker",
+        "aciklama": "Takvim izni verilmezse ne olacağı açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iptal-etkinlik",
+        "tur": "marker",
+        "aciklama": "İptalde takvim etkinliğinin silinmesi açık nokta olarak çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "kaynak",
+        "tur": "marker",
+        "aciklama": "Maddelerde kişi adıyla kaynak gösterilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "soru-bolumu",
+        "tur": "marker",
+        "aciklama": "Sorulacak sorular bölümü olmalı",
+        "tuttu": false
+      },
+      {
+        "id": "cozum-onerisi",
+        "tur": "negatif",
+        "aciklama": "Çözüm önermemeli: 'öneririm' ya da 'X yapılmalı.' gibi hüküm cümlesi (soru biçimi serbest)",
+        "tuttu": false
+      }
+    ],
+    "cikis_kodu": 0
+  },
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "02-celiski",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "siklik",
+        "tur": "marker",
+        "aciklama": "Haftalık ile günlük çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "bicim",
+        "tur": "marker",
+        "aciklama": "PDF ile Excel çelişkisi",
+        "tuttu": true
+      },
+      {
+        "id": "celiski-bolumu",
+        "tur": "marker",
+        "aciklama": "Çelişkiler bölümü olmalı",
+        "tuttu": true
+      },
+      {
+        "id": "iki-taraf",
+        "tur": "marker",
+        "aciklama": "İki kişinin adı geçmeli",
+        "tuttu": true
+      },
+      {
+        "id": "karar-uydurma",
+        "tur": "negatif",
+        "aciklama": "Bir tarafı seçip karar gibi yazmamalı",
+        "tuttu": false
+      }
+    ],
+    "cikis_kodu": 0
+  },
+  {
+    "arac": "claude",
+    "skill": "request-analysis",
+    "fixture": "03-tuzak",
+    "hukum": "PASS",
+    "sonuclar": [
+      {
+        "id": "kaynaksiz-rakip",
+        "tur": "marker",
+        "aciklama": "Rakip iddiasının verisiz olduğu belirtilmeli",
+        "tuttu": true
+      },
+      {
+        "id": "baska-ekip",
+        "tur": "marker",
+        "aciklama": "Değişikliğin başka ekibe bağımlılığı çıkmalı",
+        "tuttu": true
+      },
+      {
+        "id": "tarih-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan tarih yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "yuzde-uydurma",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan yüzde ya da oran yazmamalı",
+        "tuttu": false
+      },
+      {
+        "id": "rakip-adi",
+        "tur": "negatif",
+        "aciklama": "Notta olmayan rakip adı yazmamalı",
+        "tuttu": false
+      }
+    ],
+    "cikis_kodu": 0
+  }
+]

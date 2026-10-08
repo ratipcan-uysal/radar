@@ -1,0 +1,12 @@
+{
+  "aciklama": "İki konu kararsız: süresi geçmiş kod ve birden çok kod. Bunlar için kriter uydurulmamalı, 'Kararı eksik' listesine girmeli.",
+  "marker": [
+    { "id": "eksik-bolumu", "aciklama": "Kararı eksik bölümü", "desen": "karari eksik" },
+    { "id": "suresi-gecmis", "aciklama": "Süresi geçmiş kod eksik karar olarak", "desen": "(suresi gecmis|suresi dolmus|gecersiz kod)" },
+    { "id": "birden-cok", "aciklama": "Birden çok kod eksik karar olarak", "desen": "(birden (cok|fazla) kod|ikinci kod|ayni sepette)" },
+    { "id": "kime", "aciklama": "Kime sorulacağı", "desen": "elif" }
+  ],
+  "negatif": [
+    { "id": "uydurma-kriter", "aciklama": "Süresi geçmiş kod için kesin beklenen davranış uydurmamalı (ör. 'kod reddedilir' bir Beklenen satırında)", "desen": "beklenen[^\\n]{0,40}(suresi (gecmis|dolmus)[^\\n]{0,80}(reddedilir|kabul edilmez|hata mesaji))" }
+  ]
+}

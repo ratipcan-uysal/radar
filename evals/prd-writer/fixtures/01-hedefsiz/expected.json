@@ -1,0 +1,13 @@
+{
+  "aciklama": "Başarı ölçütü ve tarih yok: PRD bunları 'Bilinmiyor' demeli, uydurmamalı. Gereksinimler kaynağıyla.",
+  "marker": [
+    { "id": "bilinmiyor", "aciklama": "Eksik bölüm için Bilinmiyor", "desen": "bilinmiyor" },
+    { "id": "k1-kaynak", "aciklama": "K1 kaynağı", "desen": "\\bk1\\b" },
+    { "id": "kapsam-disi", "aciklama": "Kapsam dışı bölümü (çevrimdışı rezervasyon)", "desen": "kapsam disi" },
+    { "id": "yedi-gun", "aciklama": "7 gün saklama notu (Kaan)", "desen": "7 gun" }
+  ],
+  "negatif": [
+    { "id": "yuzde-hedef", "aciklama": "Uydurma yüzde hedef", "desen": "%\\s?\\d+|\\d+\\s?%" },
+    { "id": "tarih-uydurma", "aciklama": "Uydurma teslim tarihi", "desen": "(\\b\\d{1,2} (ocak|subat|mart|nisan|mayis|haziran|temmuz|agustos|eylul|ekim|kasim|aralik)\\b|\\b20\\d\\d-\\d\\d-\\d\\d\\b|\\bq[1-4]\\b)" }
+  ]
+}
