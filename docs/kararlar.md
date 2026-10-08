@@ -63,3 +63,20 @@ PRD iki ayrı modele eleştirtildi (`docs/karsilastirma/05-*-elestiri.md`). İki
 | K34 | Kayıt mı kişi mi | Radar kayıt sayar. Pano ve raporda "kişi" değil "kayıt" yazar. Aynı `id` farklı içerikle iki kez gelirse ikisi de atlanır, neden "çelişkili id" olarak yazılır. | Deniz, Ece |
 | K35 | Örneklem ve kanal dağılımı | Raporun ilk satırı kapsamı söyler: tarih aralığı, kayıt sayısı ve kanal dağılımı. Yönetim sunumunda "örnek dosyaya göre" ifadesi kullanılır. | Deniz |
 | K36 | Puan ile metin uyuşmazlığı | Sürüm 1'de puan esas alınır. Uyuşmazlık sürüm 2'de ele alınacak. | Deniz |
+
+# Son tur: 11 Ekim (kapsam donduruldu)
+
+PRD sürüm 2'nin "Açık kararlar" listesi tek toplantıda kapatıldı. Deniz: "Kararlar donduruldu. Bundan sonra çıkan her şey sürüm 2 listesine."
+
+| # | Açık karar | Karar | Kim verdi |
+|---|---|---|---|
+| K37 | Sözlük ve tema adı | Sözlük en geç 13 Ekim'de onaylanır. Tema adı "İptal ücreti ve politikası" olur. | Deniz |
+| K38 | Kriterlerin güncellenmesi | Kriterler K21-K36'ya göre güncellenir. Örnek dosyanın beklenen sayıları elle değil, testteki betikle hesaplanır; kriter testin çıktısına bağlanır. | Deniz, Mert |
+| K39 | Övgü teması | Övgü sözlükte kelimeyle belirlenir. Övgü kaydı bir şikâyet temasına da giriyorsa orada da sayılır. Övgü puanlanmaz, panoda "diğer"in üstünde sayısıyla görünür. İstek kayıtları (ör. masa seçimi) sıralamaya girer. | Deniz |
+| K40 | Radar ne gösteriyor | Şu anki önceliği, yani yenilik dahil puanı. Rapor her tema için yeniliksiz temel puanı da yazar. | Deniz |
+| K41 | Örnekleme | Dosya, seçilen tarih aralığındaki bütün kanalların bütün kayıtlarını içerir. "Kesit" yalnız tarih aralığı demektir. | Ece |
+| K42 | Kişisel veri ve rapor | `id` raporda kalır. E-posta tamamen maskelenir (`a***@***`). Rapor yalnız ürün ekibinin alanına konur. Veri sorumlusu onayı sürüm 2'den önce alınır. | Mert, Deniz |
+| K43 | Anket puanı | Radar dönüşüm yapmaz, gelen 1-5 puanı kullanır. Dönüşümü Ece dışa aktarırken yapar ve belgeler. | Ece |
+| K44 | Atlama nedenleri | Panodaki ifadeler: "boş metin", "tekrar", "çelişkili id", "ileri tarih", "eksik alan", "geçersiz puan", "geçersiz tarih", "bilinmeyen kanal", "bilinmeyen segment". | Deniz |
+| K45 | "Bugün" | Tarayıcının saat dilimindeki bugünün tarihi. Testlerde bugün dışarıdan verilir. Rapor tarihi geçerli satırlardan alınır. | Mert |
+| K46 | Rapor başı | Önce `# Radar raporu: <tarih>` başlığı, hemen altında kapsam satırı (K35). | Deniz |

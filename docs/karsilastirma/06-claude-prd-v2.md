@@ -152,6 +152,10 @@
 | CX6 | Eşit kanal ağırlığı seçilmiş bir örnekten tarafsız öncelik üretmez. | **Kısmen kapandı.** K35 kapsamı ve kanal dağılımını rapora koyuyor. Seçim yöntemi açıklanmadı. | §4 Rapor, §7, §8 "Örnek dosya", §9-5 |
 | CX7 | Puan, metindeki şiddeti temsil etmiyor. Kanal puanlarının anlamı ve anket dönüşümü tanımsız. | **Kısmen kapandı.** K36: sürüm 1'de puan esas, uyuşmazlık sürüm 2'de. Dönüşümün doğrulanması kararsız. | §4 Puan, §5, §8 "Mutsuzluk puandan okunuyor", §9-7 |
 
+---
 
-## 11. Kapanan açık kararlar (11 Ekim)
-Bölüm 9'daki on bir açık karar, `docs/kararlar.md` içinde K37-K46 olarak kapatıldı ve kapsam donduruldu: 1 → K37 · 2 → K38 · 3 → K39 · 4 → K40 · 5 → K41 · 6 → K42 · 7 → K43 · 8 → K37 · 9 → K44 · 10 → K45 · 11 → K46.
+- **Kararla gelen yeni açık noktalar:** Eleştiri dışında, kararların kendisinden üç açık nokta çıktı. Bunları da "Açık kararlar"a ekledim:
+  - K31'deki "bugün"ün kaynağı.
+  - K31 ile K28 arasında rapor tarihinin hangi satırlardan alınacağı.
+  - K28 ile K35 arasında raporun ilk satırının ne olacağı.
+- **Örnek dosyadaki sayılar:** PRD'de geçen 192,0, 229,5, 1,79 gibi sayılar eleştirilerin elle yaptığı hesaplardan alındı. Ben yeniden hesaplamadım, PRD'de de doğrulanmadıkları yazıyor.
