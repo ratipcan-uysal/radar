@@ -80,3 +80,15 @@ PRD sürüm 2'nin "Açık kararlar" listesi tek toplantıda kapatıldı. Deniz: 
 | K44 | Atlama nedenleri | Panodaki ifadeler: "boş metin", "tekrar", "çelişkili id", "ileri tarih", "eksik alan", "geçersiz puan", "geçersiz tarih", "bilinmeyen kanal", "bilinmeyen segment". | Deniz |
 | K45 | "Bugün" | Tarayıcının saat dilimindeki bugünün tarihi. Testlerde bugün dışarıdan verilir. Rapor tarihi geçerli satırlardan alınır. | Mert |
 | K46 | Rapor başı | Önce `# Radar raporu: <tarih>` başlığı, hemen altında kapsam satırı (K35). | Deniz |
+
+# Plan kararları: 12 Ekim
+
+İki aracın planı (`docs/karsilastirma/08-*-plan.md`) karşılaştırıldı. Claude'un planı seçildi; açık soruları kapatıldı.
+
+| # | Soru | Karar | Kim verdi |
+|---|---|---|---|
+| K47 | Sayfa nasıl açılır | Yerelde `python3 -m http.server` ile açılır; yayında GitHub Pages sunar. K3'teki "sunucu yok" kararı "veri dışarı gitmez, arka uç yok" demektir; statik dosya sunmak bu karara aykırı değildir. Çift tıkla `file://` açmak desteklenmez, README bunu söyler. | Mert, Deniz |
+| K48 | Sözlük şeması | `{ "surum", "temalar": [{ "ad", "kurallar": [[kelime, ...], ...] }], "ovgu": { "kurallar" } }`. Bir kural içindeki kelimelerin hepsi geçmelidir; kurallardan biri tutarsa kayıt temaya girer. Skill bu biçimde üretir. | Deniz, Mert |
+| K49 | K44 dışı satır sorunları | Satır satır ayrıştırılır; metin içinde satır sonu desteklenmez. Fazla alan ve kapanmamış tırnak "eksik alan" sayılır. Birden çok sorunu olan satıra tek neden yazılır. | Deniz, Ece |
+| K50 | Markdown'da yıldız | Raporda alıntılar `>` blok alıntısıdır ve maske yıldızları `\*` diye kaçırılır; Confluence'ta yıldız olarak görünür. Panoda kaçış yoktur. | Deniz |
+| K51 | Beklenen değerleri kim hesaplar | `tests/beklenen/hesapla.mjs` uygulamanın kodunu kullanmaz; kuralları ayrı ve sade bir kodla yeniden hesaplar, uygulamayla yalnız sözlüğü paylaşır. Çıktıyı Deniz onaylar. | Deniz, Mert |
