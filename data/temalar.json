@@ -1,0 +1,411 @@
+{
+  "surum": "2026-10-08",
+  "temalar": [
+    {
+      "ad": "İptal ücreti ve politikası",
+      "kurallar": [
+        [
+          "iptal",
+          "ucret"
+        ],
+        [
+          "iptal",
+          "kesil"
+        ],
+        [
+          "iptal",
+          "kesinti"
+        ],
+        [
+          "iptal",
+          "kesti"
+        ],
+        [
+          "iptal",
+          "ceza"
+        ],
+        [
+          "iptal",
+          "para"
+        ],
+        [
+          "iptal",
+          " tl"
+        ],
+        [
+          "iptal",
+          "iade"
+        ],
+        [
+          "iptal",
+          "sure"
+        ],
+        [
+          "iptal",
+          "politika"
+        ],
+        [
+          "iptal",
+          "kosul"
+        ],
+        [
+          "cancellation fee"
+        ],
+        [
+          "cancel",
+          "fee"
+        ],
+        [
+          "cancel",
+          "charge"
+        ],
+        [
+          "cancel",
+          "refund"
+        ],
+        [
+          "cancel",
+          "policy"
+        ]
+      ]
+    },
+    {
+      "ad": "Geç ya da hiç gelmeyen bildirim",
+      "kurallar": [
+        [
+          "bildirim"
+        ],
+        [
+          "mesaj",
+          "gelme"
+        ],
+        [
+          "mesaj",
+          "gec"
+        ],
+        [
+          "haber",
+          "gelm"
+        ],
+        [
+          "sira",
+          "kacir"
+        ],
+        [
+          "notification"
+        ],
+        [
+          "reminder"
+        ]
+      ]
+    },
+    {
+      "ad": "Ödeme hatası",
+      "kurallar": [
+        [
+          "odeme",
+          "yapama"
+        ],
+        [
+          "odeme",
+          "basarisiz"
+        ],
+        [
+          "odeme",
+          "iki kere"
+        ],
+        [
+          "odeme",
+          "donuyor"
+        ],
+        [
+          "odeme",
+          "sorun"
+        ],
+        [
+          "on odeme"
+        ],
+        [
+          "3d secure"
+        ],
+        [
+          "reddedildi"
+        ],
+        [
+          "kayitli kart"
+        ],
+        [
+          "taksit"
+        ],
+        [
+          "kapora"
+        ],
+        [
+          "payment"
+        ],
+        [
+          "declined"
+        ],
+        [
+          "charged twice"
+        ]
+      ]
+    },
+    {
+      "ad": "Giriş ve hesap sorunu",
+      "kurallar": [
+        [
+          "yeniden giris"
+        ],
+        [
+          "giris yapami"
+        ],
+        [
+          "sifre"
+        ],
+        [
+          "sms",
+          "gelm"
+        ],
+        [
+          "hesab",
+          "bolun"
+        ],
+        [
+          "kayit olami"
+        ],
+        [
+          "login"
+        ],
+        [
+          "log in"
+        ],
+        [
+          "sign in"
+        ],
+        [
+          "sign up"
+        ],
+        [
+          "password"
+        ],
+        [
+          "verification code"
+        ]
+      ]
+    },
+    {
+      "ad": "Sadakat puanı kaybı",
+      "kurallar": [
+        [
+          "puan",
+          "sifirlan"
+        ],
+        [
+          "puan",
+          "silin"
+        ],
+        [
+          "puan",
+          "kayb"
+        ],
+        [
+          "puan",
+          "gitti"
+        ],
+        [
+          "points",
+          "lost"
+        ],
+        [
+          "points",
+          "reset"
+        ],
+        [
+          "points",
+          "missing"
+        ]
+      ]
+    },
+    {
+      "ad": "Yanlış ya da eski restoran bilgisi",
+      "kurallar": [
+        [
+          "fotograf",
+          "eski"
+        ],
+        [
+          "fotograf",
+          "degis"
+        ],
+        [
+          "fiyat",
+          "guncel"
+        ],
+        [
+          "fiyat",
+          "farkli"
+        ],
+        [
+          "menude yok"
+        ],
+        [
+          "bilgi",
+          "yanlis"
+        ],
+        [
+          "saat",
+          "yanlis"
+        ],
+        [
+          "adres",
+          "eski"
+        ],
+        [
+          "adres",
+          "yanlis"
+        ],
+        [
+          "tasinmis"
+        ],
+        [
+          "gittik",
+          "kapali"
+        ],
+        [
+          "telefon numara",
+          "degil"
+        ],
+        [
+          "telefon numara",
+          "yanlis"
+        ],
+        [
+          "wrong address"
+        ],
+        [
+          "wrong",
+          "hours"
+        ],
+        [
+          "outdated"
+        ],
+        [
+          "photos",
+          "old"
+        ]
+      ]
+    },
+    {
+      "ad": "Masa ve oturma yeri seçimi",
+      "kurallar": [
+        [
+          "masa",
+          "sec"
+        ],
+        [
+          "masa",
+          "kroki"
+        ],
+        [
+          "bahce",
+          "salon"
+        ],
+        [
+          "alan",
+          "secim"
+        ],
+        [
+          "erisilebilir"
+        ],
+        [
+          "tekerlekli"
+        ],
+        [
+          "sessiz",
+          "kose"
+        ],
+        [
+          "cam kenar"
+        ],
+        [
+          "window seat"
+        ],
+        [
+          "wheelchair"
+        ],
+        [
+          "choose",
+          "table"
+        ],
+        [
+          "select",
+          "table"
+        ]
+      ]
+    }
+  ],
+  "ovgu": {
+    "kurallar": [
+      [
+        "sorunsuz"
+      ],
+      [
+        "en sevdigim"
+      ],
+      [
+        "arayuz",
+        "sade"
+      ],
+      [
+        "iki dokunus"
+      ],
+      [
+        "pratik"
+      ],
+      [
+        "hayat kurtar"
+      ],
+      [
+        "gercekci"
+      ],
+      [
+        "guzel dusunul"
+      ],
+      [
+        "cok kolay"
+      ],
+      [
+        "oneririm"
+      ],
+      [
+        "boyle devam"
+      ],
+      [
+        "iade",
+        "ayni gun"
+      ],
+      [
+        "pasta getir"
+      ],
+      [
+        "mukemmel"
+      ],
+      [
+        "great"
+      ],
+      [
+        "love"
+      ],
+      [
+        "recommend"
+      ],
+      [
+        "excellent"
+      ],
+      [
+        "awesome"
+      ]
+    ]
+  }
+}

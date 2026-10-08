@@ -92,3 +92,9 @@ PRD sürüm 2'nin "Açık kararlar" listesi tek toplantıda kapatıldı. Deniz: 
 | K49 | K44 dışı satır sorunları | Satır satır ayrıştırılır; metin içinde satır sonu desteklenmez. Fazla alan ve kapanmamış tırnak "eksik alan" sayılır. Birden çok sorunu olan satıra tek neden yazılır. | Deniz, Ece |
 | K50 | Markdown'da yıldız | Raporda alıntılar `>` blok alıntısıdır ve maske yıldızları `\*` diye kaçırılır; Confluence'ta yıldız olarak görünür. Panoda kaçış yoktur. | Deniz |
 | K51 | Beklenen değerleri kim hesaplar | `tests/beklenen/hesapla.mjs` uygulamanın kodunu kullanmaz; kuralları ayrı ve sade bir kodla yeniden hesaplar, uygulamayla yalnız sözlüğü paylaşır. Çıktıyı Deniz onaylar. | Deniz, Mert |
+
+# Sözlük onayı: 13 Ekim
+
+| # | Soru | Karar | Kim verdi |
+|---|---|---|---|
+| K52 | Tema sözlüğü | `docs/karsilastirma/11-claude-sozluk.md`'deki öneri değiştirilmeden onaylandı ve `data/temalar.json` oldu: yedi tema ve övgü. "Sadakat puanı kaybı" ayrı tema olarak kalır (2 kayıt). Öneriyle gelen "şüpheli eşleşmeler" listesi sürüm 2'de gözden geçirilecek. | Deniz |
