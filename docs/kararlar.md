@@ -33,3 +33,19 @@ Kabul kriterleri yazılırken çıkan "Kararı eksik" listesi (E1-E13) Deniz ve 
 | K18 | Tarayıcı | Chrome, Safari ve Edge'in güncel sürümleri. | Mert |
 | K19 | Performans | 5.000 satırlık dosyada pano 2 saniyenin altında açılır. | Deniz |
 | K20 | İptal teması | "İptal ücreti" teması yalnız ücret, kesinti, ceza ya da para geçen iptal kayıtlarını kapsar. "Bildirim gecikti, rezervasyonum iptal oldu" bildirim temasına girer. | Deniz |
+
+# Ek kararlar: 9 Ekim
+
+Kriterlerin ikinci turunda çıkan E14-E22 için kısa toplantı. Deniz: "Bundan sonra çıkan uç durumları sürüm 2'ye yazıyoruz; demoya bunlarla gidiyoruz."
+
+| # | Soru | Karar | Kim verdi |
+|---|---|---|---|
+| K21 | Tema sözlüğü (E1) | Sözlüğü `feedback-clustering` skill'i önerir, Deniz onaylar. Onaylanan sözlük `data/temalar.json` olur ve testler buna göre yazılır. "Ücretsiz iptal süresi" ve iptal politikası soruları "iptal ücreti" temasına girer, çünkü kullanıcının derdi aynıdır. Olumlu yorumlar ayrı "övgü" temasında toplanır ve sıralamaya girmez. | Deniz |
+| K22 | Pencere (E14) | 14 gün: en yeni tarih ve önceki 13 gün. | Deniz |
+| K23 | Okunan ve atlanan (E15) | "Okunan", başlık hariç dosyadaki satır sayısıdır. Tekrar eden kayıtlarda ilk satır tutulur, sonrakiler "tekrar" nedeniyle atlananlara yazılır. | Deniz |
+| K24 | Diğer satır sorunları (E16) | Geçerli kanallar `destek`, `magaza`, `anket`; geçerli segmentler `yeni`, `duzenli`, `kurumsal`. Tarih yalnız `YYYY-AA-GG` biçiminde. UTF-8 BOM kabul edilir. Dışında kalan her şey bozuk satırdır ve atlanır. Bütün satırlar atlanırsa pano yerine "Kullanılabilir satır yok" yazar. | Deniz, Ece |
+| K25 | Sayı gösterimi (E17) | Türkçe biçim: virgül ayraç, bir ondalık, yarım yukarı yuvarlanır (`229,5`). Ortalama puan da bir ondalık. | Deniz |
+| K26 | Alfabe (E18) | Türk alfabesi sırası (`localeCompare` tr). | Deniz |
+| K27 | Diğer telefon biçimleri (E19) | Tire, parantez ve boşlukla yazılmış Türkiye numaraları (`0532-555-12-34`, `(0532) 555 12 34`, `532 555 12 34`) da maskelenir. Yurt dışı numaralar sürüm 2'de. | Mert |
+| K28 | Rapor adı (E20) | Dosya adındaki tarih, dosyadaki en yeni tarihtir. Rapor `# Radar raporu: <tarih>` ile başlar, her tema `##` başlığıdır. | Deniz |
+| K29 | Ölçüm (E21-E22) | Performans ekibin standart dizüstünde, dosya seçildiği andan pano görünene kadar ölçülür. K17 yalnız teslim edilen koda uygulanır; testler Node'un yerleşik test aracıyla yazılır. | Deniz, Mert |
