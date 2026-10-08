@@ -1,0 +1,151 @@
+id,tarih,kanal,metin,puan,segment
+GB-0001,2026-08-24,destek,"Kayıtlı kartım silinmiş, her seferinde yeniden giriyorum.",1,duzenli
+GB-0002,2026-09-10,magaza,"Kurumsal yemeklerimizi hep buradan ayarlıyoruz, sorunsuz. 👏",5,duzenli
+GB-0003,2026-09-20,magaza,Bildirimler son güncellemeden beri hep geç düşüyor. Çok can sıkıcı,2,duzenli
+GB-0004,2026-10-01,anket,"Fotoğraflar çok eski, mekân değişmiş.",2,duzenli
+GB-0005,2026-08-25,magaza,iptal edince ne kadar kesileceğini bilmek istiyorum,3,duzenli
+GB-0006,2026-10-03,magaza,Onay bildirimi rezervasyon saatinden sonra geldi.,1,duzenli
+GB-0007,2026-09-08,magaza,"İptal ücreti olduğunu ödeme sayfasında görmedim, iade istiyorum.",1,yeni
+GB-0008,2026-09-14,anket,kartim reddedildi ama bankada sorun yok. Cok can sikici.,2,duzenli
+GB-0009,2026-09-29,magaza,"Bildirim izni acik, yine de mesaj yarim saat sonra geliyor",2,yeni
+GB-0010,2026-09-11,anket,"Ödeme iki kere çekildi, birini iade edin",2,duzenli
+GB-0011,2026-08-29,destek,her açılışta yeniden giriş istiyor.,2,yeni
+GB-0012,2026-09-18,anket,Vejetaryen secenek var yaziyor ama menude yoktu. Cok can sikici,4,yeni
+GB-0013,2026-09-24,destek,İptal ücretini kaldırın ya da en azından baştan söyleyin.,2,kurumsal
+GB-0014,2026-09-17,anket,Yeni restoran keşfetmek için en sevdiğim uygulama.,5,duzenli
+GB-0015,2026-09-24,destek,"Merhaba, 3D Secure ekranı açılmıyor, ödeme yapamadım. Lütfen düzeltin.",2,yeni
+GB-0016,2026-09-14,anket,"Teşekkürler, arayüz sade, rezervasyon iki dokunuşta bitiyor.",5,duzenli
+GB-0017,2026-08-30,destek,Çıkış yapıp girince sadakat puanlarım sıfırlanmış görünüyor. Destek de yardımcı olmadı.,3,duzenli
+GB-0018,2026-09-13,magaza,Bebek arabasi icin genis masa secenegi olsun.,3,kurumsal
+GB-0019,2026-08-27,anket,destek ekibi iademi aynı gün yaptı.,5,kurumsal
+GB-0020,2026-09-27,anket,Bildirim gecikmesi yüzünden rezervasyonum iptal oldu,2,duzenli
+GB-0021,2026-09-15,destek,"Masayı iptal ettim, restorana değil size ücret ödemişim, anlamadım",3,duzenli
+GB-0022,2026-08-24,anket,"Menüdeki fiyatlar güncel değil, restoranda farklı çıktı. 1 yıldızı bile hak etmiyor.",2,duzenli
+GB-0023,2026-08-27,magaza,"Yorumlar gerçekçi, seçtiğimiz yer anlatıldığı gibiydi. 👏",4,yeni
+GB-0024,2026-09-20,anket,"Merhaba, masa hazır mesajı gelmediği için sıramızı kaçırdık. Böyle olmamalı.",2,kurumsal
+GB-0025,2026-08-24,magaza,Bekleme listesi özelliği hayat kurtardı.,4,yeni
+GB-0026,2026-09-06,destek,Taksit seçeneği görünmüyor.,3,duzenli
+GB-0027,2026-09-03,magaza,"bahçe mi salon mu seçemiyorum, restoran rastgele veriyor.",3,yeni
+GB-0028,2026-10-01,destek,"Merhaba, taksit seçeneği görünmüyor. Böyle olmamalı.",2,yeni
+GB-0029,2026-08-24,anket,"Teşekkürler, çok pratik, son dakika masa bulduk. 👏",4,yeni
+GB-0030,2026-09-14,destek,"2 saat önce iptal ettim yine de ücret aldınız, bu nasıl kural?",1,duzenli
+GB-0031,2026-09-21,magaza,Bildirimler geç gelince restoran gelmedi sanıp masayı verdi,1,yeni
+GB-0032,2026-09-03,anket,"Doğum günü notunu restoran görmüş, pasta getirdiler",5,duzenli
+GB-0033,2026-08-24,magaza,Sadakat puanları güzel düşünülmüş. Emeği geçenlere teşekkürler,5,duzenli
+GB-0034,2026-09-16,magaza,iptal ücretini kaldırın ya da en azından baştan söyleyin. Çok can sıkıcı,3,yeni
+GB-0035,2026-09-26,anket,Sigara içilebilen alan seçimi eklenebilir.,3,duzenli
+GB-0036,2026-09-14,magaza,Yeni restoran keşfetmek için en sevdiğim uygulama. Böyle devam.,5,yeni
+GB-0037,2026-09-17,anket,bekleme listesi özelliği hayat kurtardı.,5,yeni
+GB-0038,2026-09-01,anket,Oneri: grup rezervasyonunda yan yana iki masa secemiyorum.,4,yeni
+GB-0039,2026-09-05,anket,Bekleme listesi ozelligi hayat kurtardi. Herkese oneririm.,4,duzenli
+GB-0040,2026-09-20,destek,"Hatırlatma bildirimi rezervasyondan sonra düştü, anlamsız.",2,duzenli
+GB-0041,2026-09-02,anket,"rezervasyonu iptal ettim, 50 TL kesilmiş. Hiçbir yerde yazmıyordu. Böyle olmamalı.",2,yeni
+GB-0042,2026-08-25,destek,"3D Secure ekranı açılmıyor, ödeme yapamadım.",1,duzenli
+GB-0043,2026-09-03,magaza,Otopark bilgisi yanlis.,4,yeni
+GB-0044,2026-09-18,magaza,"Yorumlar gercekci, sectigimiz yer anlatildigi gibiydi. Herkese oneririm.",4,duzenli
+GB-0045,2026-10-01,magaza,"Merhaba, bildirimler son güncellemeden beri hep geç düşüyor. Lütfen düzeltin.",2,kurumsal
+GB-0046,2026-09-06,destek,"Merhaba, şifremi sıfırlama maili gelmedi.",1,duzenli
+GB-0047,2026-09-14,magaza,Cikis yapip girince sadakat puanlarim sifirlanmis gorunuyor. Boyle olmamali.,3,duzenli
+GB-0048,2026-09-16,destek,"Restoran kapalıydı, ben iptal ettim, ücreti bana kestiniz",2,yeni
+GB-0049,2026-09-29,anket,"Kurumsal yemeklerimizi hep buradan ayarlıyoruz, sorunsuz.",5,kurumsal
+GB-0050,2026-09-14,magaza,"SMS kodu gelmiyor, giris yapamiyorum",1,duzenli
+GB-0051,2026-10-01,magaza,"Masanız hazır bildirimi 20 dakika geç geldi, kapıda bekledik.",1,yeni
+GB-0052,2026-09-24,magaza,iptal cezası rezervasyon onayında yazmıyor. Bir daha kullanır mıyım bilmiyorum,3,duzenli
+GB-0053,2026-09-28,magaza,"Merhaba, telefonu yeniden başlatınca birikmiş bildirimler birden geldi.",2,kurumsal
+GB-0054,2026-09-26,anket,Destek ekibi iademi aynı gün yaptı.,5,duzenli
+GB-0055,2026-09-11,destek,"ön ödeme sırasında uygulama kapandı, para çekildi mi bilmiyorum. 1 yıldızı bile hak etmiyor",3,yeni
+GB-0056,2026-10-02,destek,5.2 sürümünden sonra bildirimler gecikiyor. Destek de yardımcı olmadı.,1,duzenli
+GB-0057,2026-10-04,magaza,Bildirim yine gecikti 😡,1,yeni
+GB-0058,2026-09-17,destek,"Rezervasyonu iptal ettim, 50 TL kesilmis. Hicbir yerde yazmiyordu.",3,yeni
+GB-0059,2026-09-25,destek,Bildirimler gec gelince restoran gelmedi sanip masayi verdi. Boyle olmamali.,2,yeni
+GB-0060,2026-08-27,anket,"Yine aynı sorun: restoranın adresi eski, taşınmışlar.",2,duzenli
+GB-0061,2026-09-26,magaza,"Merhaba, 5.2 sürümünden sonra bildirimler gecikiyor.",1,duzenli
+GB-0062,2026-08-26,anket,"Çok pratik, son dakika masa bulduk. Böyle devam",5,yeni
+GB-0063,2026-09-19,magaza,Sadakat puanları güzel düşünülmüş.,5,yeni
+GB-0064,2026-09-20,destek,"Hastalandim, son dakika iptal ettim, 75 TL gitti",2,duzenli
+GB-0065,2026-10-01,anket,"Yine aynı sorun: masanız hazır bildirimi 20 dakika geç geldi, kapıda bekledik. Çok can sıkıcı",1,duzenli
+GB-0066,2026-08-27,destek,Apple ile giriş yapınca hesabım ikiye bölündü. Bir daha kullanır mıyım bilmiyorum.,2,duzenli
+GB-0067,2026-09-10,anket,"Bahçe mi salon mu seçemiyorum, restoran rastgele veriyor.",3,kurumsal
+GB-0068,2026-09-17,destek,"Ödeme sayfası sürekli dönüyor, sonuç yok. Bir daha kullanır mıyım bilmiyorum",1,duzenli
+GB-0069,2026-08-24,destek,Apple ile giris yapinca hesabim ikiye bolundu.,3,yeni
+GB-0070,2026-09-23,magaza,Bildirim gecikmesi yüzünden rezervasyonum iptal oldu.,1,yeni
+GB-0071,2026-09-24,magaza,Onay bildirimi rezervasyon saatinden sonra geldi. Böyle olmamalı,2,duzenli
+GB-0072,2026-09-28,magaza,"Merhaba, çalışma saatleri yanlış, gittik kapalıydı.",3,duzenli
+GB-0073,2026-09-06,anket,Tekerlekli sandalye için erişilebilir masa işaretlensin.,4,yeni
+GB-0074,2026-09-10,magaza,"Kurumsal yemeklerimizi hep buradan ayarlıyoruz, sorunsuz. Böyle devam",4,duzenli
+GB-0075,2026-09-30,magaza,Ücretsiz iptal süresi ne kadar? Hiçbir yerde yok.,1,duzenli
+GB-0076,2026-10-04,destek,"Odeme iki kere cekildi, birini iade edin.",1,duzenli
+GB-0077,2026-10-05,anket,iptal ücretinin iadesi için üç kez yazdım.,3,yeni
+GB-0078,2026-08-30,destek,"Yine aynı sorun: çalışma saatleri yanlış, gittik kapalıydı. Destek de yardımcı olmadı.",4,duzenli
+GB-0079,2026-08-28,magaza,"teşekkürler, yeni restoran keşfetmek için en sevdiğim uygulama. Herkese öneririm.",5,duzenli
+GB-0080,2026-09-25,magaza,Table ready notification arrived way too late.,1,yeni
+GB-0081,2026-09-12,destek,"SMS kodu gelmiyor, giris yapamiyorum. Boyle olmamali.",3,kurumsal
+GB-0082,2026-09-20,destek,Kartim reddedildi ama bankada sorun yok.,3,kurumsal
+GB-0083,2026-09-28,magaza,"Masanız hazır bildirimi 20 dakika geç geldi, kapıda bekledik. Destek de yardımcı olmadı.",2,duzenli
+GB-0084,2026-10-02,destek,"İptal ücreti kesildi, beni arayın 0532 555 12 34",1,duzenli
+GB-0085,2026-09-20,magaza,"Sıra bize geldiğinde haber gelmiyor, uygulamaya bakmak zorunda kalıyorum.",1,duzenli
+GB-0086,2026-10-03,destek,Odeme basarisiz dedi ama banka uygulamasinda cekilmis gorunuyor. Boyle olmamali.,1,yeni
+GB-0087,2026-09-21,anket,"Çok pratik, son dakika masa bulduk.",4,duzenli
+GB-0088,2026-10-05,magaza,Telefonu yeniden başlatınca birikmiş bildirimler birden geldi.,2,duzenli
+GB-0089,2026-09-21,anket,Bildirimler son güncellemeden beri hep geç düşüyor. Böyle olmamalı,2,yeni
+GB-0090,2026-09-15,anket,Sadakat puanları güzel düşünülmüş,4,yeni
+GB-0091,2026-08-27,anket,"arayüz sade, rezervasyon iki dokunuşta bitiyor. 👏",4,duzenli
+GB-0092,2026-09-23,destek,"Ön ödeme sırasında uygulama kapandı, para çekildi mi bilmiyorum",3,yeni
+GB-0093,2026-09-12,anket,"masayi iptal ettim, restorana degil size ucret odemisim, anlamadim. Lutfen duzeltin",1,duzenli
+GB-0094,2026-08-29,destek,"İptal butonuna basınca uyarı çıkmadı, sonra kartımdan para çekildi.",3,yeni
+GB-0095,2026-09-24,magaza,"Bildirim izni açık, yine de mesaj yarım saat sonra geliyor.",2,duzenli
+GB-0096,2026-09-06,destek,"Bir dakika içinde iptal ettim, yine kesinti var. Lütfen düzeltin",1,duzenli
+GB-0097,2026-08-31,anket,Tekerlekli sandalye için erişilebilir masa işaretlensin,3,yeni
+GB-0098,2026-08-28,destek,"Kurumsal yemeğimiz ertelendi, iptal ücreti 400 TL tuttu. 1 yıldızı bile hak etmiyor",1,yeni
+GB-0099,2026-10-04,destek,yurt disi numarayla kayit olamiyorum.,3,kurumsal
+GB-0100,2026-08-26,anket,Iptal ucretinin iadesi icin uc kez yazdim. Boyle olmamali.,2,yeni
+GB-0101,2026-09-25,magaza,"Sıra bize geldiğinde haber gelmiyor, uygulamaya bakmak zorunda kalıyorum. Çok can sıkıcı.",2,kurumsal
+GB-0102,2026-09-05,destek,Ödeme başarısız dedi ama banka uygulamasında çekilmiş görünüyor. Çok can sıkıcı.,2,duzenli
+GB-0103,2026-08-27,destek,İptal cezası rezervasyon onayında yazmıyor.,3,duzenli
+GB-0104,2026-09-07,destek,"Menudeki fiyatlar guncel degil, restoranda farkli cikti.",4,duzenli
+GB-0105,2026-10-03,magaza,"Uygulama ""harika"" ama iptal ücreti, bildirimler, ödeme... hepsi sorun",2,duzenli
+GB-0106,2026-08-26,destek,İptal ücreti var ama restoran beni hiç aramadı.,3,yeni
+GB-0107,2026-09-04,destek,"Kayitli kartim silinmis, her seferinde yeniden giriyorum. Destek de yardimci olmadi.",2,yeni
+GB-0108,2026-09-26,destek,Yurt dışı numarayla kayıt olamıyorum. Bir daha kullanır mıyım bilmiyorum,1,duzenli
+GB-0109,2026-08-25,destek,Şifremi sıfırlama maili gelmedi. 1 yıldızı bile hak etmiyor,3,duzenli
+GB-0110,2026-09-09,anket,"Restoranın adresi eski, taşınmışlar. Lütfen düzeltin.",2,yeni
+GB-0111,2026-09-30,destek,"Merhaba, masa hazir mesaji gelmedigi icin siramizi kacirdik. Lutfen duzeltin.",1,yeni
+GB-0112,2026-08-27,magaza,"Ödeme sayfası sürekli dönüyor, sonuç yok. Lütfen düzeltin",1,yeni
+GB-0113,2026-09-16,magaza,Masa krokisini görüp seçmek güzel olurdu. Teşekkürler.,4,kurumsal
+GB-0114,2026-09-05,anket,Sigara icilebilen alan secimi eklenebilir. Cok ise yarar.,3,duzenli
+GB-0115,2026-09-28,anket,"Arayüz sade, rezervasyon iki dokunuşta bitiyor. Böyle devam.",4,duzenli
+GB-0116,2026-10-05,magaza,"Great app for tourists, booking was easy.",5,yeni
+GB-0117,2026-08-31,destek,"Kurumsal yemeğimiz ertelendi, iptal ücreti 400 TL tuttu",1,duzenli
+GB-0118,2026-09-18,anket,bebek arabası için geniş masa seçeneği olsun.,3,duzenli
+GB-0119,2026-09-23,anket,rezervasyon değiştirmek çok kolay. 👏,5,duzenli
+GB-0120,2026-09-26,destek,"Ödeme sorunu var, numaram +90 555 987 65 43",2,yeni
+GB-0121,2026-09-16,magaza,Payment failed twice with a valid foreign card.,2,yeni
+GB-0122,2026-08-30,anket,masa krokisini gorup secmek guzel olurdu.,3,duzenli
+GB-0123,2026-09-24,anket,Yine aynı sorun: ücretsiz iptal süresi ne kadar? Hiçbir yerde yok.,1,duzenli
+GB-0124,2026-09-21,magaza,Kapora iadesi bir haftadır gelmedi.,3,duzenli
+GB-0125,2026-09-01,anket,"doğum günü notunu restoran görmüş, pasta getirdiler",5,duzenli
+GB-0126,2026-09-04,destek,Telefon numarası restoranın değil başka bir yerin.,3,yeni
+GB-0127,2026-08-30,magaza,Yine aynı sorun: kapora iadesi bir haftadır gelmedi.,2,kurumsal
+GB-0128,2026-09-18,destek,"Yine aynı sorun: hastalandım, son dakika iptal ettim, 75 TL gitti. Çok can sıkıcı.",1,duzenli
+GB-0129,2026-09-27,anket,"İptal ücreti olduğunu ödeme sayfasında görmedim, iade istiyorum. Destek de yardımcı olmadı.",3,yeni
+GB-0130,2026-09-25,destek,"Merhaba, iptal ücreti var ama restoran beni hiç aramadı. Bir daha kullanır mıyım bilmiyorum.",2,yeni
+GB-0131,2026-10-01,destek,"Merhaba, iptal politikasını uygulamada bulamadım, çok gizli. Böyle olmamalı",2,yeni
+GB-0132,2026-09-13,anket,"Bir dakika içinde iptal ettim, yine kesinti var. Destek de yardımcı olmadı.",3,yeni
+GB-0133,2026-08-25,magaza,"2 saat önce iptal ettim yine de ücret aldınız, bu nasıl kural? 1 yıldızı bile hak etmiyor.",3,yeni
+GB-0134,2026-10-05,anket,Cam kenarı masa seçebilmek isterdim. Teşekkürler.,3,yeni
+GB-0135,2026-09-28,destek,"Merhaba, iptal edince ne kadar kesileceğini bilmek istiyorum. Lütfen düzeltin.",1,kurumsal
+GB-0136,2026-09-12,destek,"Fotograflar cok eski, mekân degismis. Lutfen duzeltin.",4,yeni
+GB-0137,2026-09-29,magaza,I was charged a cancellation fee nobody told me about.,2,yeni
+GB-0138,2026-09-19,anket,Oneri: cam kenari masa secebilmek isterdim.,3,yeni
+GB-0139,2026-09-02,destek,Her açılışta yeniden giriş istiyor,3,kurumsal
+GB-0140,2026-09-30,anket,,3,duzenli
+GB-0141,2026-09-18,anket,"Restoran kapalıydı, ben iptal ettim, ücreti bana kestiniz. Böyle olmamalı",1,yeni
+GB-0142,2026-09-24,magaza,"merhaba, Android'de bildirim hic gelmedi, restoran masamizi baskasina verdi. Boyle olmamali.",2,yeni
+GB-0143,2026-09-22,magaza,"Hatırlatma bildirimi rezervasyondan sonra düştü, anlamsız. Lütfen düzeltin.",1,yeni
+GB-0144,2026-09-28,destek,"android'de bildirim hiç gelmedi, restoran masamızı başkasına verdi.",2,yeni
+GB-0145,2026-09-11,magaza,Rezervasyon değiştirmek çok kolay.,5,yeni
+GB-0146,2026-10-05,magaza,"Iptal butonuna basinca uyari cikmadi, sonra kartimdan para cekildi. Lutfen duzeltin.",2,duzenli
+GB-0147,2026-08-27,anket,Vejetaryen seçenek var yazıyor ama menüde yoktu.,3,duzenli
+GB-0148,2026-09-10,magaza,sessiz bir kose istedigimi not olarak yazabileyim.,4,duzenli
+GB-0149,2026-09-15,destek,"İptal politikasını uygulamada bulamadım, çok gizli",2,yeni
+GB-0150,2026-08-29,destek,her açılışta yeniden giriş istiyor.,2,yeni
