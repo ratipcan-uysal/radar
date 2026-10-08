@@ -1,6 +1,8 @@
 import { dogrula } from './dogrula.js';
 import { sozlukHazirla } from './sozluk.js';
+import { puanHesapla } from './puan.js';
 import { temaEsle } from './tema.js';
+import { bicim } from './bicim.js';
 
 const dosyaGirdisi = document.getElementById('dosya');
 const durum = document.getElementById('durum');
@@ -54,10 +56,12 @@ dosyaGirdisi.addEventListener('change', async () => {
       durum.textContent = hata;
       return;
     }
-    const temalar = temaEsle(sonuc.kayitlar, sozluk);
-    for (const tema of temalar.temalar) satirEkle(`${tema.ad}: ${tema.kayitlar.length}`);
-    satirEkle(`Övgü: ${temalar.ovgu.kayitlar.length}`);
-    satirEkle(`Diğer: ${temalar.diger.kayitlar.length}`);
+    const temalar = puanHesapla(sonuc.kayitlar, temaEsle(sonuc.kayitlar, sozluk));
+    for (const tema of temalar.temalar) {
+      satirEkle(`${tema.ad}: puan ${bicim(tema.puan.pay, tema.puan.payda)}, ${tema.kayit} kayıt, ortalama puan ${bicim(tema.ortalama.pay, tema.ortalama.payda)}`);
+    }
+    satirEkle(`Övgü: ${temalar.ovgu.kayit} kayıt`);
+    satirEkle(`Diğer: ${temalar.diger.kayit} kayıt`);
   } catch {
     if (buSecim !== secim) return;
     pano.textContent = '';

@@ -1,0 +1,197 @@
+{
+  "bugun": "2026-10-08",
+  "sonuc": {
+    "durum": "tamam",
+    "redNedeni": "",
+    "okunan": 150,
+    "atlanan": 2,
+    "nedenler": {
+      "boş metin": 1,
+      "tekrar": 1
+    },
+    "kapsam": {
+      "ilk": "2026-08-24",
+      "son": "2026-10-05",
+      "kayit": 148,
+      "kanallar": {
+        "destek": 51,
+        "magaza": 51,
+        "anket": 46
+      }
+    },
+    "pencere": {
+      "bas": "2026-09-22",
+      "son": "2026-10-05"
+    },
+    "temalar": [
+      {
+        "ad": "Geç ya da hiç gelmeyen bildirim",
+        "kayit": 29,
+        "toplamPuan": 46,
+        "yeniKayit": 23,
+        "ortalama": {
+          "pay": 46,
+          "payda": 29
+        },
+        "son14GunPayi": {
+          "pay": 23,
+          "payda": 29
+        },
+        "puan": {
+          "pay": 6656,
+          "payda": 29
+        },
+        "temelPuan": {
+          "pay": 128,
+          "payda": 1
+        },
+        "sira": 1
+      },
+      {
+        "ad": "İptal ücreti ve politikası",
+        "kayit": 35,
+        "toplamPuan": 70,
+        "yeniKayit": 13,
+        "ortalama": {
+          "pay": 70,
+          "payda": 35
+        },
+        "son14GunPayi": {
+          "pay": 13,
+          "payda": 35
+        },
+        "puan": {
+          "pay": 6720,
+          "payda": 35
+        },
+        "temelPuan": {
+          "pay": 140,
+          "payda": 1
+        },
+        "sira": 2
+      },
+      {
+        "ad": "Ödeme hatası",
+        "kayit": 21,
+        "toplamPuan": 41,
+        "yeniKayit": 7,
+        "ortalama": {
+          "pay": 41,
+          "payda": 21
+        },
+        "son14GunPayi": {
+          "pay": 7,
+          "payda": 21
+        },
+        "puan": {
+          "pay": 2380,
+          "payda": 21
+        },
+        "temelPuan": {
+          "pay": 85,
+          "payda": 1
+        },
+        "sira": 3
+      },
+      {
+        "ad": "Giriş ve hesap sorunu",
+        "kayit": 10,
+        "toplamPuan": 22,
+        "yeniKayit": 2,
+        "ortalama": {
+          "pay": 22,
+          "payda": 10
+        },
+        "son14GunPayi": {
+          "pay": 2,
+          "payda": 10
+        },
+        "puan": {
+          "pay": 456,
+          "payda": 10
+        },
+        "temelPuan": {
+          "pay": 38,
+          "payda": 1
+        },
+        "sira": 4
+      },
+      {
+        "ad": "Masa ve oturma yeri seçimi",
+        "kayit": 14,
+        "toplamPuan": 46,
+        "yeniKayit": 2,
+        "ortalama": {
+          "pay": 46,
+          "payda": 14
+        },
+        "son14GunPayi": {
+          "pay": 2,
+          "payda": 14
+        },
+        "puan": {
+          "pay": 608,
+          "payda": 14
+        },
+        "temelPuan": {
+          "pay": 38,
+          "payda": 1
+        },
+        "sira": 5
+      },
+      {
+        "ad": "Yanlış ya da eski restoran bilgisi",
+        "kayit": 12,
+        "toplamPuan": 37,
+        "yeniKayit": 2,
+        "ortalama": {
+          "pay": 37,
+          "payda": 12
+        },
+        "son14GunPayi": {
+          "pay": 2,
+          "payda": 12
+        },
+        "puan": {
+          "pay": 490,
+          "payda": 12
+        },
+        "temelPuan": {
+          "pay": 35,
+          "payda": 1
+        },
+        "sira": 6
+      },
+      {
+        "ad": "Sadakat puanı kaybı",
+        "kayit": 2,
+        "toplamPuan": 6,
+        "yeniKayit": 0,
+        "ortalama": {
+          "pay": 6,
+          "payda": 2
+        },
+        "son14GunPayi": {
+          "pay": 0,
+          "payda": 2
+        },
+        "puan": {
+          "pay": 12,
+          "payda": 2
+        },
+        "temelPuan": {
+          "pay": 6,
+          "payda": 1
+        },
+        "sira": 7
+      }
+    ],
+    "ovgu": {
+      "kayit": 27
+    },
+    "diger": {
+      "kayit": 0
+    },
+    "sozlukSurumu": "2026-10-08"
+  }
+}
