@@ -1,8 +1,6 @@
-import { dogrula } from './dogrula.js';
+import { analizEtAlintili } from './analiz.js';
 import { sozlukHazirla } from './sozluk.js';
-import { puanHesapla } from './puan.js';
-import { temaEsle } from './tema.js';
-import { bicim } from './bicim.js';
+import { panoCiz } from './pano.js';
 
 const dosyaGirdisi = document.getElementById('dosya');
 const durum = document.getElementById('durum');
@@ -19,12 +17,6 @@ const sozlukSozu = fetch('data/temalar.json')
   .catch(hata => ({ hata: hata.message.startsWith('Tema sözlüğü')
     ? hata.message : 'Tema sözlüğü (data/temalar.json) yüklenemedi.' }));
 
-function satirEkle(metin) {
-  const satir = document.createElement('p');
-  satir.textContent = metin;
-  pano.append(satir);
-}
-
 dosyaGirdisi.addEventListener('change', async () => {
   const buSecim = ++secim;
   const dosya = dosyaGirdisi.files[0];
@@ -40,28 +32,16 @@ dosyaGirdisi.addEventListener('change', async () => {
     const simdi = new Date();
     const bugun = [simdi.getFullYear(), String(simdi.getMonth() + 1).padStart(2, '0'),
       String(simdi.getDate()).padStart(2, '0')].join('-');
-    const sonuc = dogrula(metin, bugun);
-    if (sonuc.durum === 'red') {
-      durum.textContent = sonuc.redNedeni;
-      return;
-    }
-    durum.textContent = sonuc.durum === 'bos' ? 'Kullanılabilir satır yok' : 'Dosya okundu.';
-    satirEkle(`Okunan: ${sonuc.okunan} kayıt, atlanan: ${sonuc.atlanan} kayıt`);
-    for (const [neden, sayi] of Object.entries(sonuc.nedenler)) satirEkle(`${neden}: ${sayi}`);
-    if (sonuc.durum === 'bos') return;
     const { sozluk, hata } = await sozlukSozu;
     if (buSecim !== secim) return;
     if (hata) {
-      pano.textContent = '';
       durum.textContent = hata;
       return;
     }
-    const temalar = puanHesapla(sonuc.kayitlar, temaEsle(sonuc.kayitlar, sozluk));
-    for (const tema of temalar.temalar) {
-      satirEkle(`${tema.ad}: puan ${bicim(tema.puan.pay, tema.puan.payda)}, ${tema.kayit} kayıt, ortalama puan ${bicim(tema.ortalama.pay, tema.ortalama.payda)}`);
-    }
-    satirEkle(`Övgü: ${temalar.ovgu.kayit} kayıt`);
-    satirEkle(`Diğer: ${temalar.diger.kayit} kayıt`);
+    const sonuc = analizEtAlintili(metin, sozluk, bugun);
+    panoCiz(pano, sonuc, document);
+    durum.textContent = sonuc.durum === 'red' ? sonuc.redNedeni
+      : sonuc.durum === 'bos' ? 'Kullanılabilir satır yok' : 'Dosya okundu.';
   } catch {
     if (buSecim !== secim) return;
     pano.textContent = '';
