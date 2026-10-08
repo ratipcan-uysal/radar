@@ -1,0 +1,10 @@
+{
+  "surum": "test-1",
+  "temalar": [
+    { "ad": "T", "kurallar": [["iptal", "ucret"], ["iptal", " tl"], ["cancel", "fee"]] },
+    { "ad": "B", "kurallar": [["bildirim"], ["notification"]] },
+    { "ad": "İ", "kurallar": [["odeme", "sorun"], ["payment", "failed"]] },
+    { "ad": "Ö", "kurallar": [["puan", "kayb"]] }
+  ],
+  "ovgu": { "kurallar": [["sorunsuz"], ["great"], ["iade", "ayni gun"]] }
+}

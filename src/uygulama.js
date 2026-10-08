@@ -1,9 +1,27 @@
 import { dogrula } from './dogrula.js';
+import { sozlukHazirla } from './sozluk.js';
+import { temaEsle } from './tema.js';
 
 const dosyaGirdisi = document.getElementById('dosya');
 const durum = document.getElementById('durum');
 const pano = document.getElementById('pano');
 let secim = 0;
+
+// Sözlük açılışta bir kez yüklenir; eksik ya da bozuksa hata dosya seçilince gösterilir.
+const sozlukSozu = fetch('data/temalar.json')
+  .then(yanit => {
+    if (!yanit.ok) throw new Error(`HTTP ${yanit.status}`);
+    return yanit.text();
+  })
+  .then(metin => ({ sozluk: sozlukHazirla(metin) }))
+  .catch(hata => ({ hata: hata.message.startsWith('Tema sözlüğü')
+    ? hata.message : 'Tema sözlüğü (data/temalar.json) yüklenemedi.' }));
+
+function satirEkle(metin) {
+  const satir = document.createElement('p');
+  satir.textContent = metin;
+  pano.append(satir);
+}
 
 dosyaGirdisi.addEventListener('change', async () => {
   const buSecim = ++secim;
@@ -26,14 +44,20 @@ dosyaGirdisi.addEventListener('change', async () => {
       return;
     }
     durum.textContent = sonuc.durum === 'bos' ? 'Kullanılabilir satır yok' : 'Dosya okundu.';
-    const ozet = document.createElement('p');
-    ozet.textContent = `Okunan: ${sonuc.okunan} kayıt, atlanan: ${sonuc.atlanan} kayıt`;
-    pano.append(ozet);
-    for (const [neden, sayi] of Object.entries(sonuc.nedenler)) {
-      const satir = document.createElement('p');
-      satir.textContent = `${neden}: ${sayi}`;
-      pano.append(satir);
+    satirEkle(`Okunan: ${sonuc.okunan} kayıt, atlanan: ${sonuc.atlanan} kayıt`);
+    for (const [neden, sayi] of Object.entries(sonuc.nedenler)) satirEkle(`${neden}: ${sayi}`);
+    if (sonuc.durum === 'bos') return;
+    const { sozluk, hata } = await sozlukSozu;
+    if (buSecim !== secim) return;
+    if (hata) {
+      pano.textContent = '';
+      durum.textContent = hata;
+      return;
     }
+    const temalar = temaEsle(sonuc.kayitlar, sozluk);
+    for (const tema of temalar.temalar) satirEkle(`${tema.ad}: ${tema.kayitlar.length}`);
+    satirEkle(`Övgü: ${temalar.ovgu.kayitlar.length}`);
+    satirEkle(`Diğer: ${temalar.diger.kayitlar.length}`);
   } catch {
     if (buSecim !== secim) return;
     pano.textContent = '';
