@@ -1,0 +1,14 @@
+# Radar: sandbox dışındaki komutlar için kurallar.
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "forbidden",
+    justification = "Push'u insan atar. Değişikliği gösterin, push istenirse kullanıcı yapar.",
+    match = ["git push", "git push origin main"],
+    not_match = ["git status"],
+)
+prefix_rule(
+    pattern = ["npm", "test"],
+    decision = "allow",
+    justification = "Testler yerel ve ağsız çalışır.",
+    match = ["npm test"],
+)
