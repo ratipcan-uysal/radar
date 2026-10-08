@@ -6,7 +6,7 @@
 |---|---|---|---|
 | K1 | Öncelik nasıl hesaplanır? | Puan = **kaç kayıt** × **mutsuzluk** × **yenilik**. Mutsuzluk = 6 − temanın ortalama puanı. Yenilik = son 14 günün kayıt payı + 1. "Yeni" segmenti formüle girmez. | Deniz |
 | K2 | Kanal ağırlığı | Bütün kanallar eşit sayılır. Selin'in itirazı not edildi, ikinci sürümde ayar olarak tekrar konuşulacak. | Deniz (Selin itiraz etti) |
-| K3 | Kişisel veri | Dosya tarayıcıdan hiçbir yere gönderilmez, dış servis ya da kütüphane çağrılmaz. Metindeki telefon numaraları panoda ve raporda maskelenir (`0532 *** ** 34`). | Mert, Deniz |
+| K3 | Kişisel veri | Dosya tarayıcıdan hiçbir yere gönderilmez, dış servis ya da kütüphane çağrılmaz. Metindeki telefon numaraları panoda ve raporda maskelenir (biçimi K15'te). | Mert, Deniz |
 | K4 | Ham dosya | Ece ad ve telefon sütunlarını silip tek CSV verir. Sütunlar sabit: `id,tarih,kanal,metin,puan,segment`. Puan her kanalda 1-5; anket 0-10'dan dönüştürülüyor. | Ece |
 | K5 | Hacim | Örnek dosya destek kayıtlarının bir kesiti. Selin'in "günde 14" sayısı destek sisteminin kendi panosundan, Radar'ın bunu tutturması beklenmiyor. | Ece, Selin |
 | K6 | Temalar | Temalar sabit bir sözlükten gelir (`data/temalar.json`), sözlüğü PM onaylar. Birden çok temaya giren kayıt her temada sayılır. Hiçbir temaya girmeyen kayıt "diğer" altında görünür. | Deniz |
@@ -27,7 +27,7 @@ Kabul kriterleri yazılırken çıkan "Kararı eksik" listesi (E1-E13) Deniz ve 
 | K12 | Panodaki sayılar | Her tema için ad, puan (bir ondalık), kayıt sayısı ve ortalama puan. Üstte okunan ve atlanan satır sayısı. | Deniz |
 | K13 | "Diğer" ve boş metin | "Diğer" puanlanmaz ve sıralamaya girmez, panonun en altında yalnız sayısıyla görünür. Boş metinli satır atlanır, nedeni "boş metin" olarak yazılır. | Deniz |
 | K14 | Eşitlik | Puanı eşit temalarda kayıt sayısı fazla olan önce gelir. O da eşitse tema adı alfabetik sıralanır. Tarihi eşit alıntılarda `id`'si küçük olan önce gelir. | Deniz |
-| K15 | Maske | 0 ya da +90 ile başlayan, boşluklu ya da bitişik 10-12 haneli telefon numaralarında son iki hane dışındaki rakamlar maskelenir. E-posta adresi `a***@alan.com` biçiminde maskelenir. İsim maskelenmez, çünkü güvenilir biçimde tespit edilemez. | Mert, Deniz |
+| K15 | Maske | 0 ya da +90 ile başlayan, boşluklu ya da bitişik 10-12 haneli telefon numaralarında son iki hane dışındaki her rakam `*` olur, boşluk ve `+` yerinde kalır: `0532 555 12 34` → `**** *** ** 34`. E-posta adresi `a***@alan.com` biçiminde maskelenir. İsim maskelenmez, çünkü güvenilir biçimde tespit edilemez. | Mert, Deniz |
 | K16 | Rapor biçimi | Dosya adı `radar-raporu-YYYY-AA-GG.md`. Her tema için başlık, puan, kayıt sayısı, ortalama puan ve 3 alıntı. Her alıntının yanında tarih, kanal ve `id` yazar, metin maskelidir. | Deniz |
 | K17 | Kütüphane | Hiçbir dış kütüphane kullanılmaz, paketlenmiş olanlar da dahil. | Mert |
 | K18 | Tarayıcı | Chrome, Safari ve Edge'in güncel sürümleri. | Mert |
