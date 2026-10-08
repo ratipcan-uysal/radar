@@ -34,6 +34,12 @@
         "tur": "negatif",
         "aciklama": "Çözüm önermemeli: 'öneririm' ya da 'X yapılmalı.' gibi hüküm cümlesi (soru biçimi serbest)",
         "tuttu": false
+      },
+      {
+        "id": "cikis-kodu",
+        "tur": "marker",
+        "aciklama": "Araç süreci 0 koduyla çıktı",
+        "tuttu": true
       }
     ],
     "cikis_kodu": 0
@@ -73,6 +79,12 @@
         "tur": "negatif",
         "aciklama": "Bir tarafı seçip karar gibi yazmamalı",
         "tuttu": false
+      },
+      {
+        "id": "cikis-kodu",
+        "tur": "marker",
+        "aciklama": "Araç süreci 0 koduyla çıktı",
+        "tuttu": true
       }
     ],
     "cikis_kodu": 0
@@ -112,6 +124,12 @@
         "tur": "negatif",
         "aciklama": "Notta olmayan rakip adı yazmamalı",
         "tuttu": false
+      },
+      {
+        "id": "cikis-kodu",
+        "tur": "marker",
+        "aciklama": "Araç süreci 0 koduyla çıktı",
+        "tuttu": true
       }
     ],
     "cikis_kodu": 0

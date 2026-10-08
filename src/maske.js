@@ -12,26 +12,34 @@ function telefonMu(rakamlar, arti) {
   return arti ? rakamlar.startsWith('90') : /^[05]/.test(rakamlar);
 }
 
-// Aday, "50 0532 555 12 34" gibi bitişik sayılarla uzayabilir. Sağdan sola gidilir;
-// her bitiş öbeği için en soldan başlayan geçerli pencere maskelenir, kalan sol taraf yeniden denenir.
+// Aday, "50 0532 555 12 34" ya da "0532 555 12 34 150" gibi yanındaki sayılarla uzayabilir.
+// Öbeklerden oluşan bütün geçerli pencereler sıralanır: önce 0 ya da +90 ile başlayan, sonra önekine göre
+// tam uzunlukta olan (0 → 11, 5 → 10, +90 → 12 hane), sonra en soldaki. Seçilenle çakışanlar elenir.
 function adayMaskele(aday) {
   const obekler = [...aday.matchAll(/\d+/g)].map(m => ({ bas: m.index, son: m.index + m[0].length }));
-  let sonuc = aday;
-  let j = obekler.length - 1;
-  while (j >= 0) {
-    let bulundu = false;
-    for (let i = 0; i <= j && !bulundu; i++) {
-      const dilim = aday.slice(obekler[i].bas, obekler[j].son);
-      const rakamlar = dilim.replace(/\D/g, '');
-      if (!telefonMu(rakamlar, /\+\s*$/.test(aday.slice(0, obekler[i].bas)))) continue;
-      const korunan = rakamlar.length - 2;
-      let sayac = 0;
-      const maskeli = dilim.replace(/\d/g, rakam => (sayac++ < korunan ? '*' : rakam));
-      sonuc = sonuc.slice(0, obekler[i].bas) + maskeli + sonuc.slice(obekler[j].son);
-      j = i - 1;
-      bulundu = true;
+  const pencereler = [];
+  for (let i = 0; i < obekler.length; i++) {
+    const arti = /\+\s*$/.test(aday.slice(0, obekler[i].bas));
+    for (let j = i; j < obekler.length; j++) {
+      const rakamlar = aday.slice(obekler[i].bas, obekler[j].son).replace(/\D/g, '');
+      if (!telefonMu(rakamlar, arti)) continue;
+      const guclu = arti || rakamlar[0] === '0';
+      const tam = rakamlar.length === (arti ? 12 : rakamlar[0] === '0' ? 11 : 10);
+      pencereler.push({ i, j, guclu, tam });
     }
-    if (!bulundu) j--;
+  }
+  pencereler.sort((a, b) => (b.guclu - a.guclu) || (b.tam - a.tam) || (a.i - b.i));
+  const secilen = [];
+  for (const p of pencereler) {
+    if (secilen.every(s => p.j < s.i || p.i > s.j)) secilen.push(p);
+  }
+  let sonuc = aday;
+  for (const { i, j } of secilen) {
+    const dilim = aday.slice(obekler[i].bas, obekler[j].son);
+    const korunan = dilim.replace(/\D/g, '').length - 2;
+    let sayac = 0;
+    const maskeli = dilim.replace(/\d/g, rakam => (sayac++ < korunan ? '*' : rakam));
+    sonuc = sonuc.slice(0, obekler[i].bas) + maskeli + sonuc.slice(obekler[j].son);
   }
   return sonuc;
 }

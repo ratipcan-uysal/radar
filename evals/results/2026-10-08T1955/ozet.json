@@ -108,7 +108,7 @@
       {
         "id": "json",
         "tur": "marker",
-        "aciklama": "Çıktıda ayrıştırılabilir JSON sözlük",
+        "aciklama": "Çıktıda ayrıştırılabilir, K48 biçiminde JSON sözlük",
         "tuttu": true
       },
       {
@@ -131,6 +131,12 @@
         "aciklama": "KR-09, KR-10, KR-11, KR-12, KR-17 aynı temada",
         "tuttu": true,
         "not": "Takip ekranı çalışmıyor"
+      },
+      {
+        "id": "ayri-temalar",
+        "tur": "marker",
+        "aciklama": "Her dert ayrı bir temada",
+        "tuttu": true
       },
       {
         "id": "ovgu",
@@ -471,7 +477,7 @@
       {
         "id": "json",
         "tur": "marker",
-        "aciklama": "Çıktıda ayrıştırılabilir JSON sözlük",
+        "aciklama": "Çıktıda ayrıştırılabilir, K48 biçiminde JSON sözlük",
         "tuttu": true
       },
       {
@@ -494,6 +500,12 @@
         "aciklama": "KR-09, KR-10, KR-11, KR-12, KR-17 aynı temada",
         "tuttu": true,
         "not": "Kargonun durumunu takip edememe"
+      },
+      {
+        "id": "ayri-temalar",
+        "tur": "marker",
+        "aciklama": "Her dert ayrı bir temada",
+        "tuttu": true
       },
       {
         "id": "ovgu",

@@ -8,5 +8,8 @@ sandbox_mode = "workspace-write"
 [mcp_servers.radar]
 command = "node"
 args = ["araclar/mcp/radar-mcp.mjs"]
-# İki araç da yalnız okur: onaysız çalışabilir
-default_tools_approval_mode = "approve"
+# radar_ozet metin döndürmez: onaysız. radar_alinti müşteri alıntısı döndürür: her çağrıda onay (K53).
+default_tools_approval_mode = "prompt"
+
+[mcp_servers.radar.tools.radar_ozet]
+approval_mode = "approve"

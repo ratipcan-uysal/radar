@@ -98,3 +98,11 @@ PRD sürüm 2'nin "Açık kararlar" listesi tek toplantıda kapatıldı. Deniz: 
 | # | Soru | Karar | Kim verdi |
 |---|---|---|---|
 | K52 | Tema sözlüğü | `docs/karsilastirma/11-claude-sozluk.md`'deki öneri değiştirilmeden onaylandı ve `data/temalar.json` oldu: yedi tema ve övgü. "Sadakat puanı kaybı" ayrı tema olarak kalır (2 kayıt). Öneriyle gelen "şüpheli eşleşmeler" listesi sürüm 2'de gözden geçirilecek. | Deniz |
+
+# İnceleme kararları: 14 Ekim
+
+İki kod incelemesi (`docs/karsilastirma/23-*`) ve doğrulama (`22-*`) sonrası.
+
+| # | Soru | Karar | Kim verdi |
+|---|---|---|---|
+| K53 | MCP sunucusu alıntıları modele veriyor; K3 ile çelişiyor | K3 tarayıcı uygulaması içindir. MCP sunucusu ve ajanla analiz yalnız örnek ya da anonimleştirilmiş veriyle yapılır; gerçek müşteri dışa aktarımı ajana verilmez. Codex'te `radar_alinti` her çağrıda onay ister, `radar_ozet` (metin döndürmez) onaysız çalışır. | Mert, Deniz |

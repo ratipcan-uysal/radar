@@ -51,7 +51,9 @@ createInterface({ input: process.stdin }).on('line', (satir) => {
   try {
     if (method === 'initialize') yaz({ jsonrpc: '2.0', id, result: { protocolVersion: params?.protocolVersion ?? '2025-06-18', capabilities: { tools: {} }, serverInfo: { name: 'radar', version: '0.1.0' }, instructions: 'Radar geri bildirim analizi. Önce radar_ozet, sonra gerekirse radar_alinti.' } });
     else if (method === 'tools/list') yaz({ jsonrpc: '2.0', id, result: { tools: ARACLAR } });
-    else if (method === 'tools/call') {
+    else if (method === 'tools/call' && !ARACLAR.some((a) => a.name === params?.name)) {
+      yaz({ jsonrpc: '2.0', id, error: { code: -32602, message: `Bilinmeyen araç: ${params?.name}` } });
+    } else if (method === 'tools/call') {
       const sonuc = cagir(params.name, params.arguments ?? {});
       yaz({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: JSON.stringify(sonuc, null, 2) }] } });
     } else if (method === 'ping') yaz({ jsonrpc: '2.0', id, result: {} });

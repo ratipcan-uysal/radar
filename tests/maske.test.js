@@ -28,6 +28,12 @@ test('telefonun yanındaki sayı telefonla birleşmez; iki numara ayrı maskelen
   assert.equal(maskele('0532 555 12 34 ve 0533 111 22 33'), '**** *** ** 34 ve **** *** ** 33');
 });
 
+test('K15: telefondan sonra gelen sayı numaranın başını açıkta bırakmaz, kendisi değişmez', () => {
+  assert.equal(maskele('Telefonum 0532 555 12 34 150 TL iade'), 'Telefonum **** *** ** 34 150 TL iade');
+  assert.equal(maskele('0532 555 12 34 123'), '**** *** ** 34 123');
+  assert.equal(maskele('+90 532 555 12 34 150 TL'), '+** *** *** ** 34 150 TL');
+});
+
 test('K42: e-posta a***@*** olur, sondaki noktalama kalır', () => {
   assert.equal(maskele('Yazın: ali.veli@ornek.com.tr.'), 'Yazın: a***@***.');
   assert.equal(maskele('Ece@Ornek.com ve 5321234567@x.com'), 'E***@*** ve 5***@***');

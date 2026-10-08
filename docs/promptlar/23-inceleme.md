@@ -1,0 +1,1 @@
+adim-05-plan ile HEAD arasındaki kod değişikliklerini (src/, tests/, araclar/, evals/run.mjs) doğruluk hataları için incele. Stil yorumu yapma. Her bulgu için: dosya:satır, ne yanlış, hangi girdiyle bozulur, önem (yüksek/orta/düşük). Emin olmadığını "zayıf" diye işaretle. En fazla 8 bulgu. Dosya değiştirme.
